@@ -14,29 +14,12 @@
         .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
         .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
         .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
-        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
-        .inline-link:hover { color: #e53935; }
         .print-button { display: block; width: 200px; margin: 20px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
         .print-button:hover { background-color: #388e3c; }
         .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
-
-        /* New styles for the dropdown selector and hidden sections */
-        .selector-container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border: 1px solid #ffe0b2;
-        }
-        #checklist-selector {
-            font-size: 1.2em;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .checklist-section.hidden {
-            display: none;
-        }
+        .selector-container { text-align: center; background-color: #fff; padding: 20px; border-radius: 8px; margin: 30px 0; border: 1px solid #ffe0b2; }
+        #checklist-selector { font-size: 1.2em; padding: 10px; border-radius: 5px; }
+        .checklist-section.hidden { display: none; }
     </style>
 </head>
 <body>
@@ -46,55 +29,149 @@
             Vivaham (Wedding)
             <div class="telugu-title">వివాహం</div>
         </h1>
-        <p class="intro">A complete checklist for the sacred wedding ceremony, organized by responsibility.</p>
+        <p class="intro">A complete and detailed shopping list for the sacred wedding ceremony, organized by family.</p>
 
         <div class="selector-container">
             <label for="checklist-selector" style="font-size: 1.2em; font-weight: bold; margin-right: 10px;">Select a Checklist:</label>
             <select id="checklist-selector">
-                <option value="common" selected>Common Items (ఉమ్మడి)</option>
-                <option value="girl">Girl's Side (పెళ్ళికూతురు)</option>
-                <option value="boy">Boy's Side (పెళ్ళికొడుకు)</option>
+                <option value="girl" selected>Bride's Side (ఆడపెళ్ళి వారు)</option>
+                <option value="boy">Groom's Side (మగపెళ్ళి వారు)</option>
             </select>
         </div>
 
         <button class="print-button" onclick="printChecklist()">🖨️ Print This List</button>
 
-        <div id="common-list" class="checklist-section">
-            <!-- <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p> -->
-            <h2>Common Items for the Ceremony (ఉమ్మడి వస్తువులు)</h2>
+        <div id="girl-list" class="checklist-section">
+            <h2>Bride's Side - Detailed Shopping List (ఆడపెళ్ళి వారి పెళ్లి సామాగ్రి)</h2>
+            
+            <h3>General Pooja Items & Powders</h3>
             <ul class="checklist">
-                <li><input type="checkbox"> All items from the&nbsp <a href="general-samagri.html" class="inline-link" target="_blank"> General Puja Samagri list</a></li>
-                <li><input type="checkbox"> Ingredients for Jeelakarra Bellam (జీలకర్ర, బెల్లం)</li>
-                <li><input type="checkbox"> Large quantity of rice & turmeric for Talambralu (తలంబ్రాల బియ్యం)</li>
-                <li><input type="checkbox"> Baskets for Talambralu (తలంబ్రాల గంపలు)</li>
-                <li><input type="checkbox"> A small, flat grindstone (సన్నికల్లు)</li>
-                <li><input type="checkbox"> A new mat for the couple to sit on (కొత్త చాప)</li>
-                <li><input type="checkbox"> Flower garlands for the couple (పూల దండలు)</li>
+                <li><input type="checkbox"> Turmeric (పసుపు): 100 gr</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gr</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
+                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 100 gr</li>
+                <li><input type="checkbox"> Whole Turmeric Roots (పసుపుకొమ్ములు): 200 gr</li>
+                <li><input type="checkbox"> Attar & Rose Water (అత్తరు, పన్నీరు)</li>
+                <li><input type="checkbox"> Amla or Chickpea Flour (ఉసిరి లేక శనగపిండి)</li>
             </ul>
-        </div>
 
-        <div id="girl-list" class="checklist-section hidden">
-            <h2>Girl's Side Checklist (పెళ్ళికూతురు వారి జాబితా)</h2>
+            <h3>Offerings (Flowers, Fruits, etc.)</h3>
             <ul class="checklist">
-                <li><input type="checkbox"> Wedding Sarees for Gauri Puja & Kanyadanam (పెళ్లి చీరలు)</li>
-                <li><input type="checkbox"> Items for Pellikuthuru Cheyadam (నలుగు సామాగ్రి, గాజులు)</li>
-                <li><input type="checkbox"> Idol or image of Goddess Gauri for Gauri Puja</li>
-                <li><input type="checkbox"> Silver plate for Kanyadanam (వెండి పళ్ళెం)</li>
-                <li><input type="checkbox"> Two coconuts for groom's parents (అయ్యవారికి కొబ్బరికాయలు)</li>
-                <li><input type="checkbox"> Groom's attire given by bride's side (పెళ్ళికొడుకు బట్టలు)</li>
-                <li><input type="checkbox"> Gold ring for the groom</li>
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (small) (పూలమూరలు): 15</li>
+                <li><input type="checkbox"> Flower Garlands (large) (పూలదండలు): 2</li>
+                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 300</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 gr</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరపండ్లు): 250 gr</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 5</li>
+                <li><input type="checkbox"> Dry Coconuts (ఎండు కొబ్బరులు): 10</li>
+            </ul>
+
+            <h3>For the Homam & Mandapam</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Firewood Bundles (సమిధలు): 10 bundles</li>
+                <li><input type="checkbox"> Bricks (ఇటుకలు): 10</li>
+                <li><input type="checkbox"> Sand (ఇసుక): 1/4 bag</li>
+                <li><input type="checkbox"> Anthill Soil (పుట్టమన్ను)</li>
+                <li><input type="checkbox"> Wedding Altar/Platform (పెళ్ళిపీట)</li>
+            </ul>
+
+            <h3>Key Ritual Items</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Navadhanyam (నవధాన్యాలు): 250 gr</li>
+                <li><input type="checkbox"> Silver Sacred Thread (వెండి యజ్ఞోపవీతం): 1</li>
+                <li><input type="checkbox"> Jaggery & Cumin (జీలకర్ర బెల్లం)</li>
+                <li><input type="checkbox"> Rice for Talambralu (తలంబ్రాల బియ్యం): 5 kg</li>
+                <li><input type="checkbox"> Toe Rings & Mangalasutram (మట్టెలు, మంగళసూత్రం)</li>
+                <li><input type="checkbox"> Bhashikamulu (భాషికాలు): 1 set</li>
+                <li><input type="checkbox"> Yoke (కాడి) - Symbolic item</li>
+                <li><input type="checkbox"> Sandalwood Doll (చందనం బొమ్మ): 1</li>
+                <li><input type="checkbox"> Yam Shoot (కంద పిలక): 1</li>
+                <li><input type="checkbox"> Bamboo Basket (వెదురు గంప): 1</li>
+                <li><input type="checkbox"> Vessel set for washing feet (కాళ్ళు కడిగే పళ్ళెం, చెంబు, ఉంగరం)</li>
+                <li><input type="checkbox"> Marriage Agreement (లగ్న పత్రిక)</li>
+                <li><input type="checkbox"> Pots for Panakam (పానకం బిందెలు): 2</li>
+                <li><input type="checkbox"> Pot for Sthalipakam (స్థాలీపాకం గిన్నె)</li>
+                <li><input type="checkbox"> Sandalwood block (గంధం చెక్క)</li>
+                <li><input type="checkbox"> Ritual Items (మూసివాయనం, జ్యోతులు)</li>
+                <li><input type="checkbox"> Kashi Yatra Items: Umbrella, Staff, Kajal, Mirror, New Slippers</li>
+                <li><input type="checkbox"> Round Stone (గుండ్రాయి) & Grindstone (సన్నికలు)</li>
+                <li><input type="checkbox"> Black beads/ornaments (నల్లలు)</li>
+                <li><input type="checkbox"> New Scissors (కొత్త కత్తెర)</li>
+            </ul>
+
+            <h3>Groceries, Cloths, Vessels & Miscellaneous</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Rice (బియ్యము): 5 kg</li>
+                <li><input type="checkbox"> Cow's Milk, Curd, Ghee: 1/2 lt, 250 gr, 1 kg</li>
+                <li><input type="checkbox"> Honey (తేనె): 100 gr</li>
+                <li><input type="checkbox"> Moong Dal (పెసరపప్పు): 1/2 kg</li>
+                <li><input type="checkbox"> Root Vegetables (దుంపకూరలు)</li>
+                <li><input type="checkbox"> Appadalu & Vadiyalu: 1 packet each</li>
+                <li><input type="checkbox"> Sare items (సారె - అరిసెలు, లడ్డూలు, etc.)</li>
+                <li><input type="checkbox"> Towels: 2, Blouse Pieces: 4</li>
+                <li><input type="checkbox"> Clothes for the Priest (బ్రహ్మగారి వస్త్రాలు)</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹50</li>
+                <li><input type="checkbox"> Lamps, Wicks, Oil</li>
+                <li><input type="checkbox"> Kalasham Pot (కలశం చెంబు): 1</li>
+                <li><input type="checkbox"> Earthen Vessels & Lamps</li>
             </ul>
         </div>
 
         <div id="boy-list" class="checklist-section hidden">
-            <h2>Boy's Side Checklist (పెళ్ళికొడుకు వారి జాబితా)</h2>
+            <h2>Groom's Side - Detailed Shopping List (మగపెళ్ళి వారి పెళ్లి సామాగ్రి)</h2>
+
+            <h3>General Pooja Items & Powders</h3>
             <ul class="checklist">
-                <li><input type="checkbox"> Items for Snatakam & Kashi Yatra (Umbrella, book, stick)</li>
-                <li><input type="checkbox"> The Mangalasutram (మంగళసూత్రం) & gold discs (స్థాలీ బిళ్ళలు)</li>
-                <li><input type="checkbox"> The Saree for the Mangalasutra ceremony (మంగళసూత్రం కట్టే చీర)</li>
-                <li><input type="checkbox"> Silver Toe Rings (మెట్టెలు)</li>
-                <li><input type="checkbox"> Groom's main wedding attire</li>
-                <li><input type="checkbox"> Gifts for bride's sisters/cousins (ఆడపడుచు కానుకలు)</li>
+                <li><input type="checkbox"> Turmeric (పసుపు): 100 gr</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gr</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
+                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 100 gr</li>
+                <li><input type="checkbox"> Whole Turmeric Roots (పసుపుకొమ్ములు): 200 gr</li>
+                <li><input type="checkbox"> Amla or Chickpea Flour (ఉసిరి లేక శనగపిండి)</li>
+            </ul>
+
+            <h3>Offerings (Flowers, Fruits, etc.)</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (small) (పూలమూరలు): 15</li>
+                <li><input type="checkbox"> Flower Garlands (large) (పూలదండలు): 2</li>
+                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 300</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 gr</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరపండ్లు): 250 gr</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 5</li>
+                <li><input type="checkbox"> Dry Coconuts (ఎండు కొబ్బరులు): 10</li>
+            </ul>
+
+            <h3>Main Items for the Bride & Rituals</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Toe Rings & Mangalasutram (మట్టెలు, మంగళసూత్రం)</li>
+                <li><input type="checkbox"> Bhashikamulu (భాషికాలు): 1 set</li>
+                <li><input type="checkbox"> Jaggery & Cumin (జీలకర్ర బెల్లం)</li>
+                <li><input type="checkbox"> Rice for Talambralu (తలంబ్రాల బియ్యం): 5 kg</li>
+            </ul>
+
+            <h3>Groom's Ritual Items</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Kashi Yatra Items: Umbrella, Staff, Kajal, Mirror, New Slippers</li>
+                <li><input type="checkbox"> Round Stone (గుండ్రాయి) & Grindstone (సన్నికలు)</li>
+            </ul>
+
+            <h3>Cloths, Groceries & Miscellaneous</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Rice (బియ్యము): 5 kg</li>
+                <li><input type="checkbox"> Cow's Milk, Curd, Ghee: 1/2 lt, 250 gr, 1 kg</li>
+                <li><input type="checkbox"> Honey (తేనె): 100 gr</li>
+                <li><input type="checkbox"> Lamps, Wicks, Oil</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹50</li>
+                <li><input type="checkbox"> Towels: 2, Blouse Pieces: 4</li>
+                <li><input type="checkbox"> Clothes for the Priest (బ్రహ్మగారి వస్త్రాలు)</li>
+                <li><input type="checkbox"> Marriage Agreement (లగ్న పత్రిక)</li>
+                <li><input type="checkbox"> Black beads/ornaments (నల్లలు)</li>
             </ul>
         </div>
 
@@ -104,32 +181,23 @@
     <script>
         // JavaScript for dropdown and context-aware print
         const selector = document.getElementById('checklist-selector');
-        const commonList = document.getElementById('common-list');
         const girlList = document.getElementById('girl-list');
         const boyList = document.getElementById('boy-list');
 
         selector.addEventListener('change', function() {
-            // Hide all lists first
-            commonList.classList.add('hidden');
-            girlList.classList.add('hidden');
-            boyList.classList.add('hidden');
-
-            // Show the selected list
             const selectedValue = selector.value;
-            if (selectedValue === 'common') {
-                commonList.classList.remove('hidden');
-            } else if (selectedValue === 'girl') {
+            if (selectedValue === 'girl') {
                 girlList.classList.remove('hidden');
+                boyList.classList.add('hidden');
             } else if (selectedValue === 'boy') {
                 boyList.classList.remove('hidden');
+                girlList.classList.add('hidden');
             }
         });
 
         function printChecklist() {
             let visibleListId;
-            if (!commonList.classList.contains('hidden')) {
-                visibleListId = 'common-list';
-            } else if (!girlList.classList.contains('hidden')) {
+            if (!girlList.classList.contains('hidden')) {
                 visibleListId = 'girl-list';
             } else {
                 visibleListId = 'boy-list';
@@ -138,7 +206,7 @@
             const checklistContent = document.getElementById(visibleListId).innerHTML;
             const printWindow = window.open('', '_blank', 'height=600,width=800');
             printWindow.document.write('<html><head><title>Print Wedding Checklist</title>');
-            printWindow.document.write('<style>body{font-family:sans-serif;} h2{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
             printWindow.document.write('</head><body>');
             printWindow.document.write(checklistContent);
             printWindow.document.write('</body></html>');

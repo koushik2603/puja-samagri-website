@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prarambhotsavam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prarambhotsavam<div class="telugu-title">ప్రారంభోత్సవం</div></h1>
+        <p class="intro">A checklist for the inauguration ceremony of a new office, shop, or business.</p>
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+        <div id="checklist-content">
+            <h2>General Pooja Items & Powders</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Turmeric (పసుపు): 100 gr</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gr</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
+                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 100 gr</li>
+                <li><input type="checkbox"> Whole Turmeric Roots (పసుపుకొమ్ములు): 150 gr</li>
+            </ul>
+            <h2>Offerings (Flowers, Fruits & Leaves)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (పూలమూరలు): 10</li>
+                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 100</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 100 gr</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరపండ్లు): 100 gr</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 8</li>
+                <li><input type="checkbox"> Mango Leaves (మామిడిఆకులు): 1 bunch</li>
+            </ul>
+            <h2>For the Entrance (Drishti Removal)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Ash Gourd with Net Sling (బూడిద గుమ్మడికాయ ఉట్టి): 1</li>
+                <li><input type="checkbox"> Red Pumpkin (ఎర్రగుమ్మడికాయ): 1</li>
+                <li><input type="checkbox"> Lemons (నిమ్మకాయలు): 10</li>
+            </ul>
+            <h2>Groceries & Prasad</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Rice (బియ్యము): 3 kg</li>
+                <li><input type="checkbox"> Cow's Milk (ఆవు పాలు): 1/2 lt</li>
+                <li><input type="checkbox"> Cow's Curd (ఆవు పెరుగు): 50 gr</li>
+                <li><input type="checkbox"> Cow's Ghee (ఆవు నెయ్యి): 1/4 kg</li>
+                <li><input type="checkbox"> Honey (తేనె): 50 gr</li>
+                <li><input type="checkbox"> Sweets (స్వీట్స్): As desired</li>
+            </ul>
+            <h2>Cloths, Vessels & Miscellaneous</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Towels (టవల్స్): 2</li>
+                <li><input type="checkbox"> Blouse Pieces (జాకెట్ ముక్కలు): 2</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹25</li>
+                <li><input type="checkbox"> Cotton Thread Roll (దారపుబంతి): 1</li>
+                <li><input type="checkbox"> Navadhanyam (నవధాన్యాలు): 1/2 kg</li>
+                <li><input type="checkbox"> Lamps, Wicks, Oil</li>
+                <li><input type="checkbox"> Kalasham Pot (కలశం చెంబు): 1</li>
+                <li><input type="checkbox"> Deity Photos/Idols (దేవునిపటాలు)</li>
+            </ul>
+        </div>
+        <a href="pujas-vratams.html" class="back-link">← Back to All Specific Pujas</a>
+    </div>
+    <script>
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title><style>body{font-family:sans-serif;} h2{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style></head><body>' + checklistContent + '</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

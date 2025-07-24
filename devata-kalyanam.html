@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devata Kalyanam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Devata Kalyanam
+            <div class="telugu-title">దేవతా కళ్యాణం</div>
+        </h1>
+        <p class="intro">A detailed checklist for celebrating the sacred Celestial Wedding of deities.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <h2>General Pooja Items & Powders</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Turmeric (పసుపు): 100 gr</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gr</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
+                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 100 gr</li>
+                <li><input type="checkbox"> Whole Turmeric Roots (పసుపుకొమ్ములు): 150 gr</li>
+                <li><input type="checkbox"> Attar & Rose Water (అత్తరు, పన్నీరు)</li>
+            </ul>
+
+            <h2>Offerings (Flowers, Fruits & Leaves)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (small) (పూలమూరలు): 10</li>
+                <li><input type="checkbox"> Flower Garlands (large) (పూలదండలు): 2</li>
+                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 100</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 gr</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరపండ్లు): 150 gr</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 5</li>
+                <li><input type="checkbox"> Dry Coconuts (ఎండు కొబ్బరులు): 10</li>
+                <li><input type="checkbox"> Mango Leaves (మామిడిఆకులు): 1 bunch</li>
+            </ul>
+
+            <h2>For the Deities (Idols) (దేవతల కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Saree (చీర): 1 (for the Goddess)</li>
+                <li><input type="checkbox"> Dhoti & Uttareeyam (ధోతి, ఉత్తరీయం): 2 (for the God)</li>
+                <li><input type="checkbox"> Blouse Pieces (జాకెట్ ముక్కలు): 5</li>
+                <li><input type="checkbox"> Silver Sacred Thread (వెండి యజ్ఞోపవీతం): 1</li>
+                <li><input type="checkbox"> Mangalasutram & Toe Rings (మంగళసూత్రం, మట్టెలు)</li>
+                <li><input type="checkbox"> Bhashikamulu (భాషికములు): 2 sets</li>
+                <li><input type="checkbox"> Black beads/ornaments (నల్లలు)</li>
+            </ul>
+
+            <h2>Key Ritual & Grocery Items</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Wedding Platform (పెళ్ళిపీట)</li>
+                <li><input type="checkbox"> Jaggery & Cumin (జీలకర్ర బెల్లం)</li>
+                <li><input type="checkbox"> Rice for Talambralu (తలంబ్రాల బియ్యం)</li>
+                <li><input type="checkbox"> Yoke (కాడి) - Symbolic item</li>
+                <li><input type="checkbox"> New Scissors (కొత్త కత్తెర)</li>
+                <li><input type="checkbox"> Towels (టవల్స్): 2</li>
+                <li><input type="checkbox"> Rice (బియ్యము): 5 kg</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹21</li>
+                <li><input type="checkbox"> Cotton Thread Roll (దారపుబంతి): 1</li>
+                <li><input type="checkbox"> Cow's Milk (ఆవు పాలు): 1/2 lt</li>
+                <li><input type="checkbox"> Cow's Curd (ఆవు పెరుగు): 50 gr</li>
+                <li><input type="checkbox"> Cow's Ghee (ఆవు నెయ్యి): 1/2 kg</li>
+                <li><input type="checkbox"> Honey (తేనె): 50 gr</li>
+                <li><input type="checkbox"> Rice Flour (బియ్యపుపిండి): 100 gr</li>
+                <li><input type="checkbox"> Sweets (స్వీట్లు): As desired</li>
+                <li><input type="checkbox"> Box of Slaked Lime (సున్నం డబ్బా): 1</li>
+                <li><input type="checkbox"> Lamps, Wicks, Oil</li>
+                <li><input type="checkbox"> Kalasham Pots (కలశం చెంబులు): 2</li>
+                <li><input type="checkbox"> Earthen Lids/Pots (మట్టి మూకుళ్ళు, మట్టి ముంతలు)</li>
+            </ul>
+        </div>
+
+        <a href="pujas-vratams.html" class="back-link">← Back to All Specific Pujas</a>
+    </div>
+
+    <script>
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title><style>body{font-family:sans-serif;} h2{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style></head><body>' + checklistContent + '</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

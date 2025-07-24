@@ -11,27 +11,11 @@
         h1, h2, h3 { color: #d84315; text-align: center; }
         .telugu-title { color: #e65100; font-size: 0.7em; }
         .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
-        
-        /* Checklist styles */
         .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
         .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
         .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
-        .checklist ol { padding-left: 20px; }
-
-        /* Style for our new inline link */
-        .inline-link {
-            color: #c62828; /* A darker red for the link */
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .inline-link:hover {
-            color: #e53935;
-        }
-
-        /* Print Button Style */
         .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
         .print-button:hover { background-color: #388e3c; }
-
         .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
     </style>
 </head>
@@ -42,58 +26,95 @@
             Vinayaka Chavithi
             <div class="telugu-title">వినాయక చవితి</div>
         </h1>
-        <p class="intro">A complete guide to the items needed for the grand celebration of Lord Ganesha's birth, from the main puja to the final nimajjanam.</p>
+        <p class="intro">A complete and detailed shopping list for a grand Vinayaka Chavithi celebration, including the 21 sacred leaves.</p>
 
         <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
 
         <div id="checklist-content">
-            <h2>Part 1: The Main Puja (మొదటి రోజు ముఖ్య పూజ)</h2>
-            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are essential:</p>
             
-            <h3>For the Idol & Altar (విగ్రహం & పీఠం కొరకు)</h3>
+            <h2>General Pooja Items & Powders (సాధారణ పూజ సామాగ్రి)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> A clay idol of Lord Ganesha (మట్టి వినాయకుడి ప్రతిమ)</li>
-                <li><input type="checkbox"> A small, decorative umbrella for the idol (వినాయకుడి గొడుగు)</li>
-                <li><input type="checkbox"> A copy of the Vinayaka Chavithi Vrata Katha book (వ్రత కథల పుస్తకం)</li>
+                <li><input type="checkbox"> Turmeric (పసుపు): 200 grms</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 200 grms</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగర్బత్తి): 2 pack</li>
+                <li><input type="checkbox"> Camphor (కర్పూరము): 100 grms</li>
             </ul>
 
+            <h2>Sacred Leaves & Flowers (పత్రి & పుష్పాలు)</h2>
             <h3>The 21 Sacred Leaves (ఏకవింశతి పత్రాలు)</h3>
-            <ul class="checklist"><li><input type="checkbox">
-                <ol>
-                    <li>Machi Patram (మాచీ పత్రం)</li> <li>Bruhathi Patram (బృహతీ పత్రం)</li> <li>Bilva Patram (బిల్వ పత్రం)</li>
-                    <li>Durvaram (దూర్వార పత్రం)</li> <li>Dattura Patram (దత్తూర పత్రం)</li> <li>Badari Patram (బదరీ పత్రం)</li>
-                    <li>Apamarga Patram (అపామార్గ పత్రం)</li> <li>Tulasi Patram (తులసీ పత్రం)</li> <li>Chootha Patram (చూత పత్రం)</li>
-                    <li>Karaveera Patram (కరవీర పత్రం)</li> <li>Vishnu krantha Patram (విష్ణు క్రాంత పత్రం)</li> <li>Dadimi Patram (దాడిమీ పత్రం)</li>
-                    <li>Devadaru Patram (దేవదారు పత్రం)</li> <li>Maruvaka Patram (మరువక పత్రం)</li> <li>Sindhuvara Patram (సింధువార పత్రం)</li>
-                    <li>Jaji Patram (జాజి పత్రం)</li> <li>Ganika Patram (గణిక పత్రం)</li> <li>Shami Patram (శమీ పత్రం)</li>
-                    <li>Ashwattha Patram (అశ్వత్థ పత్రం)</li> <li>Arjuna Patram (అర్జున పత్రం)</li> <li>Arka Patram (అర్క పత్రం)</li>
-                </ol>
-            </li></ul>
-            
-            <h3>Special Food Offerings (నైవేద్యాలు)</h3>
             <ul class="checklist">
-                <li><input type="checkbox"> Undrallu (ఉండ్రాళ్ళు)</li>
-                <li><input type="checkbox"> Kudumulu (కుడుములు)</li>
-                <!-- <li><input type="checkbox"> Vellulli Payasam (వెల్లుల్లి పాయసం)</li> -->
-                <li><input type="checkbox"> Wood Apple fruit (వెలగ పండు)</li>
-                <li><input type="checkbox"> Panakam (పానకం) and Vadapappu (వడపప్పు)</li>
-                <li><input type="checkbox"> Other assorted seasonal fruits</li>
+                <li><input type="checkbox"> 1. Machi Patram (మాచీ పత్రం)</li>
+                <li><input type="checkbox"> 2. Bruhathi Patram (బృహతీ పత్రం)</li>
+                <li><input type="checkbox"> 3. Bilva Patram (బిల్వ పత్రం)</li>
+                <li><input type="checkbox"> 4. Durvaram (దూర్వార పత్రం - గరిక)</li>
+                <li><input type="checkbox"> 5. Dattura Patram (దత్తూర పత్రం)</li>
+                <li><input type="checkbox"> 6. Badari Patram (బదరీ పత్రం)</li>
+                <li><input type="checkbox"> 7. Apamarga Patram (అపామార్గ పత్రం)</li>
+                <li><input type="checkbox"> 8. Tulasi Patram (తులసీ పత్రం)</li>
+                <li><input type="checkbox"> 9. Chootha Patram (చూత పత్రం - మామిడి ఆకులు)</li>
+                <li><input type="checkbox"> 10. Karaveera Patram (కరవీర పత్రం)</li>
+                <li><input type="checkbox"> 11. Vishnu krantha Patram (విష్ణు క్రాంత పత్రం)</li>
+                <li><input type="checkbox"> 12. Dadimi Patram (దాడిమీ పత్రం)</li>
+                <li><input type="checkbox"> 13. Devadaru Patram (దేవదారు పత్రం)</li>
+                <li><input type="checkbox"> 14. Maruvaka Patram (మరువక పత్రం)</li>
+                <li><input type="checkbox"> 15. Sindhuvara Patram (సింధువార పత్రం)</li>
+                <li><input type="checkbox"> 16. Jaji Patram (జాజి పత్రం)</li>
+                <li><input type="checkbox"> 17. Ganika Patram (గణిక పత్రం)</li>
+                <li><input type="checkbox"> 18. Shami Patram (శమీ పత్రం)</li>
+                <li><input type="checkbox"> 19. Ashwattha Patram (అశ్వత్థ పత్రం)</li>
+                <li><input type="checkbox"> 20. Arjuna Patram (అర్జున పత్రం)</li>
+                <li><input type="checkbox"> 21. Arka Patram (అర్క పత్రం - జిల్లేడు)</li>
+            </ul>
+             <h3>Other Flowers & Garlands</h3>
+            <ul class="checklist">
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (small) (పూల మాలలు): 5</li>
+                <li><input type="checkbox"> Flower Garlands (large) (పూల దండలు): 2</li>
             </ul>
 
-            <h2>Part 2: Daily Puja during Navaratri (ప్రతిరోజు పూజ)</h2>
+            <h2>Offerings (Fruits & Naivedyam)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Fresh Flowers</li>
-                <li><input type="checkbox"> Incense Sticks</li>
-                <li><input type="checkbox"> Ghee or Oil for the lamp</li>
-                <li><input type="checkbox"> Camphor for Aarti</li>
-                <li><input type="checkbox"> A simple daily Naivedyam (fruit or sugar candy)</li>
+                <li><input type="checkbox"> Bananas (అరటిపండ్లు): 2 dzn</li>
+                <li><input type="checkbox"> Assorted Fruits (పండ్లు ఐదు రకాలు): 5 types</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరములు): 200 grms</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బెరకాయలు): 10</li>
+                <li><input type="checkbox"> Ingredients for Undrallu (ఉండ్రాళ్ళు)</li>
+                <li><input type="checkbox"> Laddu Prasadam (లడ్డూ ప్రసాదం)</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 100</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 grms</li>
             </ul>
 
-            <h2>Part 3: For the Nimajjanam (నిమజ్జనం కొరకు)</h2>
+            <h2>Cloths & Sacred Items (వస్త్రాలు & పవిత్ర వస్తువులు)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Curd (పెరుగు) and Flattened Rice (అటుకులు)</li>
-                <li><input type="checkbox"> Flowers and Camphor for the final Aarti</li>
-                <li><input type="checkbox"> A tray to carry the idol</li>
+                <li><input type="checkbox"> Dhoti + Uttariyam (ధోవతి + ఉత్తరీయం): 2 pairs</li>
+                <li><input type="checkbox"> Towel Pair (టవల్): 1 pair</li>
+                <li><input type="checkbox"> Blouse Pieces (బ్లౌస్ పీసులు): 2</li>
+                <li><input type="checkbox"> Sacred Thread (యజ్ఞోపవీతం): 2</li>
+            </ul>
+
+            <h2>Vessels & Utensils (పాత్రలు & వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Kalasham Pot (కలశము): 1</li>
+                <li><input type="checkbox"> Lamps (దీపాలు): 2</li>
+                <li><input type="checkbox"> Bell (గంట): 1</li>
+                <li><input type="checkbox"> Aarti Plate (హారతి ప్లేటు): 1</li>
+                <li><input type="checkbox"> Spoons (స్పూన్స్): 2</li>
+                <li><input type="checkbox"> Trays (ట్రేలు): 2</li>
+                <li><input type="checkbox"> Glasses (గ్లాసులు): 5</li>
+                <li><input type="checkbox"> Bowls (బౌల్స్): 2</li>
+            </ul>
+
+            <h2>Groceries & Miscellaneous (కిరాణా & ఇతర వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Rice (బియ్యం): 5 kg</li>
+                <li><input type="checkbox"> Oil (నూనె): 1 liter</li>
+                <li><input type="checkbox"> Cotton Wicks (వత్తులు): 1 pkt</li>
+                <li><input type="checkbox"> Matchbox (అగ్గిపెట్టె): 2</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లర పైసలు): ₹50</li>
+                <li><input type="checkbox"> White Cotton Thread Roll (తెల్ల దారము): 1</li>
+                <li><input type="checkbox"> Seating Mats (కూర్చునేందుకు ఆసనములు): 2</li>
+                <li><input type="checkbox"> Napkins (నాప్కీన్స్): 2</li>
             </ul>
         </div>
 
@@ -106,7 +127,7 @@
             const checklistContent = document.getElementById('checklist-content').innerHTML;
             const printWindow = window.open('', '_blank', 'height=600,width=800');
             printWindow.document.write('<html><head><title>Print Checklist</title>');
-            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
             printWindow.document.write('</head><body>');
             printWindow.document.write(checklistContent);
             printWindow.document.write('</body></html>');

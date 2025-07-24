@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namakaranam Checklist | Puja Samagri</title>
+    <title>Annaprasana Checklist | Puja Samagri</title>
     <style>
         /* Consistent styling from our other pages */
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
@@ -14,6 +14,8 @@
         .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
         .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
         .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
         .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
         .print-button:hover { background-color: #388e3c; }
         .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
@@ -23,48 +25,39 @@
 
     <div class="container">
         <h1>
-            Namakaranam
-            <div class="telugu-title">నామకరణము</div>
+            Annaprasana
+            <div class="telugu-title">అన్నప్రాశన</div>
         </h1>
-        <p class="intro">A detailed shopping list for the beautiful ceremony of formally naming a newborn child.</p>
+        <p class="intro">A checklist for the "first rice" ceremony, celebrating a baby's first intake of solid food and blessing them for a healthy life.</p>
 
         <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
 
         <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
 
-            <h2>General Pooja Items & Powders (సాధారణ పూజ సామాగ్రి)</h2>
+            <h2>For the Baby's First Meal (మొదటి ముద్ద కొరకు)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Turmeric (పసుపు): 100 gr</li>
-                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gr</li>
-                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
-                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
-                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 100 gr</li>
-            </ul>
-
-            <h2>Offerings (Flowers, Fruits & Leaves)</h2>
-            <ul class="checklist">
-                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
-                <li><input type="checkbox"> Flower Garlands (పూలమూరలు): 15</li>
-                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
-                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 20</li>
-                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 gr</li>
-                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 2</li>
-            </ul>
-
-            <h2>For the Naming Ritual (నామకరణం కొరకు)</h2>
-            <ul class="checklist">
-                <li><input type="checkbox"> Rice (బియ్యము): 5 kg (to spread on a plate)</li>
-                <li><input type="checkbox"> Ring (ఉంగరము): For writing the name</li>
-                <li><input type="checkbox"> New Clothes (నూతన వస్త్రాలు): For the baby</li>
+                <li><input type="checkbox"> Cooked Rice or Ksheerannam (అన్నము లేక క్షీరాన్నము)</li>
                 <li><input type="checkbox"> Honey (తేనె): 100 gr</li>
+                <li><input type="checkbox"> Cow's Ghee (ఆవు నెయ్యి): 1 kg</li>
                 <li><input type="checkbox"> Cow's Milk (ఆవు పాలు): 1/2 lt</li>
                 <li><input type="checkbox"> Cow's Curd (ఆవు పెరుగు): 250 gr</li>
-                <li><input type="checkbox"> Cow's Ghee (ఆవు నెయ్యి): 1 kg</li>
             </ul>
-            
-            <h2>Cloths & Miscellaneous (వస్త్రాలు & ఇతర వస్తువులు)</h2>
+
+            <h2>For the Livelihood Test (జీవికా పరీక్షకు వస్తువులు)</h2>
+            <p style="text-align:center;">These items are placed before the baby to see which one they choose, symbolically indicating their future.</p>
             <ul class="checklist">
-                <li><input type="checkbox"> Upper Cloth (ఉత్తరీయము / Angavastram): 1</li>
+                <li><input type="checkbox"> Book (పుస్తకము) - for knowledge</li>
+                <li><input type="checkbox"> Pen (కలము) - for intellect</li>
+                <li><input type="checkbox"> Small Knife/Dagger (కత్తి) - for leadership</li>
+                <li><input type="checkbox"> Gold Item (బంగారము) - for wealth</li>
+            </ul>
+
+            <h2>Groceries & Miscellaneous (కిరాణా & ఇతర వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Rice (బియ్యము): 5 kg</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 2</li>
                 <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹21</li>
             </ul>
         </div>
@@ -78,7 +71,7 @@
             const checklistContent = document.getElementById('checklist-content').innerHTML;
             const printWindow = window.open('', '_blank', 'height=600,width=800');
             printWindow.document.write('<html><head><title>Print Checklist</title>');
-            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font--weight:bold;}</style>');
             printWindow.document.write('</head><body>');
             printWindow.document.write(checklistContent);
             printWindow.document.write('</body></html>');
@@ -87,6 +80,5 @@
             printWindow.print();
         }
     </script>
-
 </body>
 </html>

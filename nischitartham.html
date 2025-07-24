@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nischitartham (Engagement) Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Nischitartham (Engagement)
+            <div class="telugu-title">నిశ్చయ తాంబూలాలు</div>
+        </h1>
+        <p class="intro">A checklist for the formal engagement ceremony where the alliance between two families is fixed with the exchange of Thamboolalu.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <h2>General Pooja Items & Powders</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Turmeric (పసుపు): 100 gms</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gms</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగర్బత్తి): 1 pack</li>
+                <li><input type="checkbox"> Camphor (కర్పూరము): 100 gms</li>
+            </ul>
+
+            <h2>Fragrances (సుగంధ ద్రవ్యాలు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Rose Water (పన్నీరు): 100 ml</li>
+                <li><input type="checkbox"> Attar (అత్తరు): 1 small bottle</li>
+                <li><input type="checkbox"> Scent/Perfume (Sentu): 1 bottle</li>
+            </ul>
+
+            <h2>Offerings (Flowers, Fruits & Leaves)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1/2 kg</li>
+                <li><input type="checkbox"> Flower Garlands (పూల మాలలు): 10</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 50</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 100 grms</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరములు): 100 grms</li>
+                <li><input type="checkbox"> Bananas (అరటిపండ్లు): 2 dzn</li>
+                <li><input type="checkbox"> Assorted Fruits (పండ్లు ఐదు రకాలు): 5 types</li>
+                <li><input type="checkbox"> Sweets (స్వీట్లు): As desired</li>
+            </ul>
+
+            <h2>Vessels & Miscellaneous</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Lamps (దీపాలు), Oil (నూనె), Wicks (వత్తులు)</li>
+                <li><input type="checkbox"> Bell (గంట) & Aarti Plate (హారతి ప్లేటు)</li>
+                <li><input type="checkbox"> Kalasham Pot (కలశము): 1</li>
+                <li><input type="checkbox"> Rice (బియ్యం): 3 kg</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లర పైసలు): ₹30</li>
+                <li><input type="checkbox"> Mango Leaves (మామిడి ఆకులు): 1 bunch</li>
+                <li><input type="checkbox"> Deity Photos (దేవిని ఫోటోలు): As needed</li>
+                <li><input type="checkbox"> White Cotton Thread Roll (తెల్ల దారము): 1</li>
+                <li><input type="checkbox"> Spoons, Trays, Glasses, Bowls</li>
+                <li><input type="checkbox"> Matchbox (అగ్గిపెట్టె): 1</li>
+            </ul>
+        </div>
+
+        <a href="life-ceremonies.html" class="back-link">← Back to All Life Ceremonies</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

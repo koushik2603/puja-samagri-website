@@ -14,8 +14,6 @@
         .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
         .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
         .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
-        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
-        .inline-link:hover { color: #e53935; }
         .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
         .print-button:hover { background-color: #388e3c; }
         .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
@@ -28,45 +26,79 @@
             Gruhapravesam
             <div class="telugu-title">గృహప్రవేశం</div>
         </h1>
-        <p class="intro">A complete checklist for the housewarming ceremony to purify your new home and welcome auspicious energies.</p>
+        <p class="intro">A complete and detailed shopping list for the housewarming ceremony, to purify your new home and welcome auspicious energies.</p>
 
         <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
 
         <div id="checklist-content">
+
+            <h2>General Pooja Items & Powders (సాధారణ పూజ సామాగ్రి)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Turmeric (పసుపు): 200 gr</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 200 gr</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
+                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 200 gr</li>
+                <li><input type="checkbox"> Whole Turmeric Roots (పసుపుకొమ్ములు): 150 gr</li>
+            </ul>
+
+            <h2>Offerings (Flowers, Fruits & Leaves)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (పూలమూరలు): 20</li>
+                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 100</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 gr</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరపండ్లు): 250 gr</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 15</li>
+            </ul>
             
-            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
-
-            <h2>At the Main Entrance (ప్రధాన ద్వారం వద్ద)</h2>
+            <h2>For the Entrance & Drishti Removal (ద్వార పూజ & దిష్టి కొరకు)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Mango Leaf Thoran (మామిడి ఆకుల తోరణం) for the main door</li>
-                <li><input type="checkbox"> White Pumpkin (బూడిద గుమ్మడికాయ)</li>
-                <li><input type="checkbox"> Lemons (నిమ్మకాయలు) and a knife</li>
-                <li><input type="checkbox"> String (దారం) to tie the items</li>
+                <li><input type="checkbox"> Ash Gourd with Net Sling (బూడిద గుమ్మడికాయ ఉట్టి): 1</li>
+                <li><input type="checkbox"> Red Pumpkin (ఎర్రగుమ్మడికాయ): 1</li>
+                <li><input type="checkbox"> Lemons (నిమ్మకాయలు): 10</li>
             </ul>
 
-            <h2>For Boiling Milk (పాలు పొంగించడానికి)</h2>
+            <h2>For Milk Boiling Ritual (పాలు పొంగించడానికి)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> A new pot or vessel (కొత్త కుండ లేదా గిన్నె)</li>
-                <li><input type="checkbox"> Milk (పాలు), enough to fill the pot</li>
-                <li><input type="checkbox"> Sugar or Jaggery (పంచదార లేదా బెల్లం)</li>
-                <li><input type="checkbox"> A new stove or burner, if possible</li>
+                <li><input type="checkbox"> Cow's Milk (ఆవు పాలు): 2.5 lt</li>
+                <li><input type="checkbox"> Milk Boiling Pot, Ladle, Lid: 1 set</li>
             </ul>
 
-            <h2>For the Main Puja & Homam (ప్రధాన పూజ & హోమం కొరకు)</h2>
+            <h2>For Purification & Puja (శుద్ధి & పూజ కొరకు)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Items for Homam Kundam: Bricks (ఇటుకలు), Sand (ఇసుక)</li>
-                <li><input type="checkbox"> Firewood sticks (సమిధలు)</li>
-                <li><input type="checkbox"> A larger quantity of Ghee (నెయ్యి) for the Homam</li>
-                <li><input type="checkbox"> Havan Samagri (హోమం సామాగ్రి)</li>
-                <li><input type="checkbox"> White Mustard Seeds (తెల్ల ఆవాలు)</li>
+                <li><input type="checkbox"> Cow Dung (ఆవుపేడ) & Cow Urine (గోమూత్రము)</li>
+                <li><input type="checkbox"> Deity Photos/Idols (దేవునిపటాలు)</li>
+                <li><input type="checkbox"> Navadhanyam (నవధాన్యాలు): 0.5 kg</li>
             </ul>
-
-            <h2>Miscellaneous Items (ఇతర వస్తువులు)</h2>
+            
+            <h2>Groceries & Prasad Items (కిరాణా & ప్రసాదం సామాగ్రి)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Rock Salt / Crystal Salt (కళ్ళు ఉప్పు) in a bowl</li>
-                <li><input type="checkbox"> A full bag of Rice (బియ్యం బస్తా)</li>
-                <li><input type="checkbox"> Turmeric roots (పసుపు కొమ్ములు)</li>
-                <li><input type="checkbox"> Trays for distributing prasad (పళ్ళాలు)</li>
+                <li><input type="checkbox"> Rice (బియ్యము): 8 kg</li>
+                <li><input type="checkbox"> Cow's Curd (ఆవు పెరుగు): 250 gr</li>
+                <li><input type="checkbox"> Cow's Ghee (ఆవు నెయ్యి): 1 kg</li>
+                <li><input type="checkbox"> Honey (తేనె): 100 gr</li>
+                <li><input type="checkbox"> Sugar (పంచదార): 1 kg</li>
+                <li><input type="checkbox"> Jaggery (బెల్లం): 1 kg</li>
+                <li><input type="checkbox"> Cardamom (యాలకులు): ₹20 worth</li>
+                <li><input type="checkbox"> Cashews (జీడిపప్పు): 200 gr</li>
+                <li><input type="checkbox"> Raisins (కిస్మిస్): 100 gr</li>
+                <li><input type="checkbox"> Rice Flour (బియ్యపుపిండి): 250 gr</li>
+            </ul>
+            
+            <h2>Cloths, Vessels & Miscellaneous (వస్త్రాలు, పాత్రలు & ఇతర వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Towels (టవల్స్): 2</li>
+                <li><input type="checkbox"> Blouse Pieces (జాకెట్ ముక్కలు): 2</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹50</li>
+                <li><input type="checkbox"> Cotton Thread Roll (దారపుబంతి): 1</li>
+                <li><input type="checkbox"> Lamps (దీపారాధన కుందులు): 1 set</li>
+                <li><input type="checkbox"> Cotton Wicks (వత్తులు): 1 packet</li>
+                <li><input type="checkbox"> Sesame Oil (నువ్వుల నూనె): 1 kg</li>
+                <li><input type="checkbox"> Kalasham Pot (కలశం చెంబు): 1</li>
+                <li><input type="checkbox"> Leaf Plates (విస్తరాకులు): 10</li>
+                <li><input type="checkbox"> New Water Pots (కొత్త నీళ్ళబిందలు): 2</li>
             </ul>
         </div>
 

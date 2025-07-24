@@ -14,8 +14,6 @@
         .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
         .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
         .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
-        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
-        .inline-link:hover { color: #e53935; }
         .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
         .print-button:hover { background-color: #388e3c; }
         .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
@@ -26,39 +24,85 @@
     <div class="container">
         <h1>
             Upanayanam (Odugu)
-            <div class="telugu-title">ఉపనయనం (ఒడుగు)</div>
+            <div class="telugu-title">ఉపనయనము (ఒడుగు)</div>
         </h1>
-        <p class="intro">A complete checklist for the sacred thread ceremony, marking a boy's initiation into the study of the Vedas and a life of spiritual discipline.</p>
+        <p class="intro">A detailed shopping list with quantities for the sacred thread ceremony.</p>
 
         <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
 
         <div id="checklist-content">
             
-            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
-
-            <h2>For the Vatu (వటువు కొరకు - The Boy)</h2>
+            <h2>General Pooja Items & Powders (సాధారణ పూజ సామాగ్రి)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Yajnopavitam (యజ్ఞోపవీతం / జంధ్యం) - several sets</li>
-                <li><input type="checkbox"> Mekhala (మేఖల) - Girdle made of Munja grass</li>
-                <li><input type="checkbox"> Dandam (దండం) - A sacred staff from the Palasha tree</li>
-                <li><input type="checkbox"> Krishnajinam (కృష్ణాజినం) - Deer skin (usually a small symbolic piece)</li>
-                <li><input type="checkbox"> New Dhoti (పంచె) & Angavastram (ఉత్తరీయం)</li>
-                <li><input type="checkbox"> Gochi Panche (గోచి పంచె) - Loincloth-style dhoti</li>
-                <li><input type="checkbox"> Bhiksha Patra / Sanchi (భిక్షా పాత్ర / సంచి) - A bowl or bag for alms</li>
+                <li><input type="checkbox"> Turmeric (పసుపు): 100 gr</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gr</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
+                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 100 gr</li>
+                <li><input type="checkbox"> Whole Turmeric Roots (పసుపుకొమ్ములు): 200 gr</li>
+                <li><input type="checkbox"> Cotton Thread Roll (దారపుబంతి): 1</li>
+                <li><input type="checkbox"> Attar & Rose Water (అత్తరు, పన్నీరు)</li>
+                <li><input type="checkbox"> Box of Slaked Lime (సున్నం డబ్బా): 1</li>
+                <li><input type="checkbox"> Amla or Chickpea Flour (ఉసిరి లేక శనగపిండి)</li>
             </ul>
 
-            <h2>For the Main Ceremony & Homam (ప్రధాన క్రతువు & హోమం కొరకు)</h2>
+            <h2>Offerings (Flowers, Fruits & Leaves)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Items for Homam: Bricks, Sand, Samidhulu, extra Ghee</li>
-                <li><input type="checkbox"> A small, flat grindstone (సన్నికల్లు)</li>
-                <li><input type="checkbox"> A special mat or seat (ఆసనం) for the Vatu and parents</li>
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (పూలమూరలు): 15</li>
+                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 300</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 gr</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరపండ్లు): 250 gr</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 5</li>
+                <li><input type="checkbox"> Dry Coconuts (ఎండు కొబ్బరులు): 10</li>
             </ul>
 
-            <h2>For Bhikshatanam & Guests (భిక్షాటనం & అతిథుల కొరకు)</h2>
+            <h2>For the Homam Kundam (హోమ గుండం కొరకు)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Uncooked Rice (బియ్యం) to be given as alms</li>
-                <li><input type="checkbox"> Sweets to celebrate the occasion</li>
-                <li><input type="checkbox"> Items for Thamboolam or return gifts for guests</li>
+                <li><input type="checkbox"> Firewood Bundles (సమిధలు): 10 bundles</li>
+                <li><input type="checkbox"> Bricks (ఇటుకలు): 10</li>
+                <li><input type="checkbox"> Sand (ఇసుక): 1/4 bag</li>
+                <li><input type="checkbox"> Anthill Soil (పుట్టమన్ను)</li>
+                <li><input type="checkbox"> Palasha Branch (మోదుగ కొమ్మ)</li>
+            </ul>
+
+            <h2>For the Vatu & Rituals (వటువు & క్రతువు కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Sacred Thread (యజ్ఞోపవీతం): 1</li>
+                <li><input type="checkbox"> Bhashikamulu (భాషికములు)</li>
+                <li><input type="checkbox"> Round Stone (గుండ్రాయి / సన్నికల్లు)</li>
+                <li><input type="checkbox"> Kashi Yatra Items: Umbrella (గొడుగు), Stick (కర్ర), Kajal (కాటుక), Mirror (అద్దం), New Slippers (కొత్త చెప్పులు)</li>
+            </ul>
+
+            <h2>Groceries & Kitchen Items (కిరాణా & వంట సామాగ్రి)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Rice (బియ్యము): 5 kg</li>
+                <li><input type="checkbox"> Cow's Milk (ఆవు పాలు): 1/2 lt</li>
+                <li><input type="checkbox"> Cow's Curd (ఆవు పెరుగు): 250 gr</li>
+                <li><input type="checkbox"> Cow's Ghee (ఆవు నెయ్యి): 1 kg</li>
+                <li><input type="checkbox"> Honey (తేనె): 100 gr</li>
+                <li><input type="checkbox"> Navadhanyam (నవధాన్యాలు): 250 gr</li>
+                <li><input type="checkbox"> Sesame Oil (నువ్వుల నూనె): 1 kg</li>
+                <li><input type="checkbox"> Jaggery & Cumin (జీలకర్ర బెల్లం)</li>
+                <li><input type="checkbox"> Appadalu (అప్పడాలు): 1 packet</li>
+                <li><input type="checkbox"> Vadiyalu (వడియాలు): 1 packet</li>
+                <li><input type="checkbox"> Ingredients for Pulagamu & Kushalannamu</li>
+            </ul>
+
+            <h2>Cloths, Vessels & Miscellaneous (వస్త్రాలు, పాత్రలు & ఇతర వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Towels (టవల్స్): 2</li>
+                <li><input type="checkbox"> Blouse Pieces (జాకెట్ ముక్కలు): 4</li>
+                <li><input type="checkbox"> Clothes for the Priest (బ్రహ్మగారి వస్త్రాలు)</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹50</li>
+                <li><input type="checkbox"> Lamps (దీపారాధన కుందులు): 1 set</li>
+                <li><input type="checkbox"> Cotton Wicks (వత్తులు): 1 packet</li>
+                <li><input type="checkbox"> Kalasham Pot (కలశం చెంబు): 1</li>
+                <li><input type="checkbox"> Leaf Plates (విస్తరాకులు): 10</li>
+                <li><input type="checkbox"> Earthen Lids/Dishes (మట్టి మూకుళ్ళు): 6</li>
+                <li><input type="checkbox"> Earthen Pots (మట్టి ముంతలు): 4</li>
+                <li><input type="checkbox"> Earthen Lamps (మట్టి ప్రమిదలు)</li>
             </ul>
         </div>
 
@@ -71,7 +115,7 @@
             const checklistContent = document.getElementById('checklist-content').innerHTML;
             const printWindow = window.open('', '_blank', 'height=600,width=800');
             printWindow.document.write('<html><head><title>Print Checklist</title>');
-            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
             printWindow.document.write('</head><body>');
             printWindow.document.write(checklistContent);
             printWindow.document.write('</body></html>');
