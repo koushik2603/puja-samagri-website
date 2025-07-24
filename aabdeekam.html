@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aabdeekam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+        /* Special style for the disclaimer box */
+        .disclaimer { background-color: #fff3e0; border: 2px solid #ff9800; border-radius: 8px; padding: 15px; margin: 20px 0; text-align: center; font-size: 1.1em; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Aabdeekam (Shraddham)
+            <div class="telugu-title">ఆబ్దీకం (శ్రాద్ధము)</div>
+        </h1>
+        <p class="intro">A checklist for the annual ancestral rite performed on the death anniversary (tithi) as a sacred duty (dharma).</p>
+
+        <div class="disclaimer">
+            <strong>Important Note:</strong> This ritual is highly dependent on family tradition (sampradayam) and MUST be guided by your family purohit. This list is a general guide only.
+        </div>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <h2>For the Ritual (క్రతువు కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Darbha Grass (కుశలు / దర్భలు)</li>
+                <li><input type="checkbox"> Black Sesame Seeds (నల్ల నువ్వులు)</li>
+                <li><input type="checkbox"> A new Yajnopavitam (జంధ్యం)</li>
+                <li><input type="checkbox"> Pavitram (పవిత్రం) - ring of Darbha grass</li>
+                <li><input type="checkbox"> Rice Flour (బియ్యం పిండి) for Pindam</li>
+                <li><input type="checkbox"> Cooked Rice (అన్నం)</li>
+                <li><input type="checkbox"> Ghee (నెయ్యి) and Honey (తేనె)</li>
+            </ul>
+
+            <h2>For Cooking the Bhojanam (భోజనం వంట కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Raw Rice (బియ్యం)</li>
+                <li><input type="checkbox"> Black Gram / Urad Dal (మినుములు)</li>
+                <li><input type="checkbox"> Permitted vegetables (e.g., Plantain, Yam)</li>
+                <li><input type="checkbox"> Rock Salt (సైంధవ లవణం)</li>
+                <li><input type="checkbox"> Note: Avoid onions, garlic, tomatoes, mustard seeds, etc.</li>
+            </ul>
+
+            <h2>For Dana (దానం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> New Dhoti (పంచె) & Angavastram (ఉత్తరీయం)</li>
+                <li><input type="checkbox"> An Aasanam (ఆసనం) - a mat for seating</li>
+                <li><input type="checkbox"> An umbrella, footwear, and a water pot</li>
+                <li><input type="checkbox"> Raw groceries (rice, dal, ghee, vegetables)</li>
+                <li><input type="checkbox"> Dakshina (దక్షిణ) - monetary offering</li>
+            </ul>
+        </div>
+
+        <a href="solemn-rites.html" class="back-link">← Back to Solemn Rites</a>
+    </div>
+
+    <script>
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

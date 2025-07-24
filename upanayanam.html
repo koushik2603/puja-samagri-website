@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upanayanam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Upanayanam (Odugu)
+            <div class="telugu-title">ఉపనయనం (ఒడుగు)</div>
+        </h1>
+        <p class="intro">A complete checklist for the sacred thread ceremony, marking a boy's initiation into the study of the Vedas and a life of spiritual discipline.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
+
+            <h2>For the Vatu (వటువు కొరకు - The Boy)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Yajnopavitam (యజ్ఞోపవీతం / జంధ్యం) - several sets</li>
+                <li><input type="checkbox"> Mekhala (మేఖల) - Girdle made of Munja grass</li>
+                <li><input type="checkbox"> Dandam (దండం) - A sacred staff from the Palasha tree</li>
+                <li><input type="checkbox"> Krishnajinam (కృష్ణాజినం) - Deer skin (usually a small symbolic piece)</li>
+                <li><input type="checkbox"> New Dhoti (పంచె) & Angavastram (ఉత్తరీయం)</li>
+                <li><input type="checkbox"> Gochi Panche (గోచి పంచె) - Loincloth-style dhoti</li>
+                <li><input type="checkbox"> Bhiksha Patra / Sanchi (భిక్షా పాత్ర / సంచి) - A bowl or bag for alms</li>
+            </ul>
+
+            <h2>For the Main Ceremony & Homam (ప్రధాన క్రతువు & హోమం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Items for Homam: Bricks, Sand, Samidhulu, extra Ghee</li>
+                <li><input type="checkbox"> A small, flat grindstone (సన్నికల్లు)</li>
+                <li><input type="checkbox"> A special mat or seat (ఆసనం) for the Vatu and parents</li>
+            </ul>
+
+            <h2>For Bhikshatanam & Guests (భిక్షాటనం & అతిథుల కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Uncooked Rice (బియ్యం) to be given as alms</li>
+                <li><input type="checkbox"> Sweets to celebrate the occasion</li>
+                <li><input type="checkbox"> Items for Thamboolam or return gifts for guests</li>
+            </ul>
+        </div>
+
+        <a href="life-ceremonies.html" class="back-link">← Back to All Life Ceremonies</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

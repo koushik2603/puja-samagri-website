@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandi Homam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+
+        /* Special style for the disclaimer box */
+        .disclaimer {
+            background-color: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Chandi Homam
+            <div class="telugu-title">చండీ హోమం</div>
+        </h1>
+        <p class="intro">A checklist for one of the most powerful fire rituals dedicated to Goddess Chandi, performed to overcome great obstacles and for universal well-being.</p>
+
+        <div class="disclaimer">
+            <strong>Important Note:</strong> This is a highly advanced ceremony that MUST be performed under the guidance of a learned Acharya (head priest). This list is a general guide only. Contact the purohit for specific requirements and quantities.
+        </div>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list in large quantities. In addition, the following are required:</p>
+
+            <h2>For the Yaga Shala & Altar (యాగశాల & పీఠం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Items for Homam Kundam: Bricks, Sand</li>
+                <li><input type="checkbox"> Items for Navagraha Mandalam (colored cloths, grains)</li>
+                <li><input type="checkbox"> Idol or Photo of Goddess Chandi/Durga</li>
+                <li><input type="checkbox"> Multiple Kalashams, Coconuts, and new blouse pieces</li>
+            </ul>
+
+            <h2>For the Homam (హోమం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> A very large quantity of Ghee (నెయ్యి)</li>
+                <li><input type="checkbox"> A large bundle of Samidhulu (సమిధలు)</li>
+                <li><input type="checkbox"> General Havan Samagri (హోమం సామాగ్రి)</li>
+                <li><input type="checkbox"> Special offerings for the 700 verses (confirm with priest):
+                    <ul>
+                        <li><input type="checkbox" style="margin-left: 20px;"> Lotus seeds (తామర గింజలు), Dried Coconut halves, Puffed Rice</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Special Offerings & Naivedyam (విశేష నైవేద్యాలు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> A whole Ash Gourd (బూడిద గుమ్మడికాయ) for symbolic bali</li>
+                <li><input type="checkbox"> A new Saree & blouse piece for the Goddess</li>
+                <li><input type="checkbox"> Pomegranates (దానిమ్మ పండ్లు) and Sugarcane pieces (చెరుకు ముక్కలు)</li>
+                <li><input type="checkbox"> Items for Kanya Puja (gifts for young girls)</li>
+                <li><input type="checkbox"> Items for Suvasini Puja (gifts for married women)</li>
+            </ul>
+
+            <h2>For Poornahuti (The Final Offering) (పూర్ణాహుతి కొరకు)</h2>
+             <ul class="checklist">
+                <li><input type="checkbox"> A whole dry coconut (పూర్ణ ఫలం)</li>
+                <li><input type="checkbox"> A large piece of new silk cloth (పూర్ణాహుతి వస్త్రం)</li>
+                <li><input type="checkbox"> Navaratnas (నవరత్నాలు) - nine gems (can be symbolic)</li>
+                <li><input type="checkbox"> Items for Dana (దానం) and Dakshina (దక్షిణ) for all priests</li>
+            </ul>
+        </div>
+
+        <a href="pujas-vratams.html" class="back-link">← Back to All Specific Pujas</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

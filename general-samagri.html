@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Puja Samagri | Checklist</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            General Puja Samagri
+            <div class="telugu-title">సామాన్య పూజ సామాగ్రి</div>
+        </h1>
+        <p class="intro">These are the essential items required for most common Hindu pujas and ceremonies. Start with this list for any puja.</p>
+        
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            <h2>Idols & Altar (విగ్రహాలు & పూజా మందిరం)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Murti (Vigraham) or photo of the main deity</li>
+                <li><input type="checkbox"> A small, clean cloth (Vastram)</li>
+                <li><input type="checkbox"> A small stool or platform (Peeta)</li>
+            </ul>
+
+            <h2>Lamps & Incense (దీపాలు & ధూపం)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Lamps (Prameedalu)</li>
+                <li><input type="checkbox"> Cotton wicks (Vattulu)</li>
+                <li><input type="checkbox"> Ghee (Neyyi) or Oil (Noone)</li>
+                <li><input type="checkbox"> Camphor (Karpooram) for Aarti</li>
+                <li><input type="checkbox"> Incense sticks (Agarbattilu)</li>
+                <li><input type="checkbox"> Dhoop (Dhoopam / Sambrani)</li>
+            </ul>
+
+            <h2>Sacred Offerings & Powders (నైవేద్యాలు & చూర్ణాలు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Turmeric powder (Pasupu)</li>
+                <li><input type="checkbox"> Vermilion powder (Kunkuma)</li>
+                <li><input type="checkbox"> Sandalwood paste (Gandham)</li>
+                <li><input type="checkbox"> Akshat (Akshintalu)</li>
+                <li><input type="checkbox"> Fresh flowers (Poolu) & Garland (Maala)</li>
+                <li><input type="checkbox"> Fruits (Pandlu)</li>
+                <li><input type="checkbox"> Betel leaves (Tamalapakulu) & Betel nuts (Vakkalu)</li>
+                <li><input type="checkbox"> One whole Coconut (Kobbari Kaya)</li>
+                <li><input type="checkbox"> Prasad / Naivedyam (a homemade sweet)</li>
+            </ul>
+
+            <h2>Ritual Items (పూజ వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> A Kalash (Kalasham)</li>
+                <li><input type="checkbox"> Clean water (Jalam) & Ganga Jal if available</li>
+                <li><input type="checkbox"> A small bell (Ghanta)</li>
+                <li><input type="checkbox"> A sacred thread (Kalava / Moli)</li>
+                <li><input type="checkbox"> Mango leaves (Mamidi Aakulu)</li>
+                <li><input type="checkbox"> Matchbox (Aggipette)</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

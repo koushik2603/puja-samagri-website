@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyanarayana Vratam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist li ul { margin-left: 20px; width: 100%; } /* Style for nested lists */
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Sri Satyanarayana Swamy Vratam
+            <div class="telugu-title">శ్రీ సత్యనారాయణ స్వామి వ్రతం</div>
+        </h1>
+        <p class="intro">A complete checklist for performing the Satyanarayana Vratam, a puja dedicated to Lord Vishnu for truth, prosperity, and the fulfillment of wishes.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
+
+            <h2>For the Mandapam & Kalasham (మండపం & కలశం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Image or Idol of Sri Satyanarayana Swamy (స్వామి పటం లేదా విగ్రహం)</li>
+                <li><input type="checkbox"> A new white cloth for the altar (పీఠంపై కొత్త తెల్లటి వస్త్రం)</li>
+                <li><input type="checkbox"> A new blouse piece for the Kalasham (కలశం కోసం కొత్త రవికె గుడ్డ)</li>
+                <li><input type="checkbox"> Wheat grains or Rice for the Navagraha Mandala</li>
+                <li><input type="checkbox"> Navadhanyam (నవధాన్యాలు)</li>
+                <li><input type="checkbox"> Tulasi leaves (తులసి దళాలు) - very important</li>
+            </ul>
+
+            <h2>For the Main Puja & Story (ప్రధాన పూజ & కథ కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Satyanarayana Vratam Katha book (వ్రత కథల పుస్తకం)</li>
+                <li><input type="checkbox"> Bananas (అరటి పళ్ళు), often in larger quantities</li>
+                <li><input type="checkbox"> Rupee coins (రూపాయి బిళ్ళలు)</li>
+                <li><input type="checkbox"> Dry Dates (ఎండు ఖర్జూరాలు)</li>
+                <li>
+                    <input type="checkbox"> <strong>Panchamrutam (పంచామృతం)</strong>
+                    <ul>
+                        <li><input type="checkbox"> Cow's Milk (ఆవు పాలు)</li>
+                        <li><input type="checkbox"> Curd/Yogurt (పెరుగు)</li>
+                        <li><input type="checkbox"> Ghee (నెయ్యి)</li>
+                        <li><input type="checkbox"> Honey (తేనె)</li>
+                        <li><input type="checkbox"> Sugar (పంచదార)</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>For the Prasadam (ప్రసాదం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Sooji Rava / Semolina (గోధుమ రవ్వ) for the main prasadam</li>
+                <li><input type="checkbox"> Sugar (పంచదార)</li>
+                <li><input type="checkbox"> Cashews & Raisins (జీడిపప్పు & కిస్మిస్)</li>
+                <li><input type="checkbox"> Cardamom powder (యాలకుల పొడి)</li>
+            </ul>
+        </div>
+
+        <a href="pujas-vratams.html" class="back-link">← Back to All Specific Pujas</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

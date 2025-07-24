@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivaham (Wedding) Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 20px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+
+        /* New styles for the dropdown selector and hidden sections */
+        .selector-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 1px solid #ffe0b2;
+        }
+        #checklist-selector {
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .checklist-section.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Vivaham (Wedding)
+            <div class="telugu-title">వివాహం</div>
+        </h1>
+        <p class="intro">A complete checklist for the sacred wedding ceremony, organized by responsibility.</p>
+
+        <div class="selector-container">
+            <label for="checklist-selector" style="font-size: 1.2em; font-weight: bold; margin-right: 10px;">Select a Checklist:</label>
+            <select id="checklist-selector">
+                <option value="common" selected>Common Items (ఉమ్మడి)</option>
+                <option value="girl">Girl's Side (పెళ్ళికూతురు)</option>
+                <option value="boy">Boy's Side (పెళ్ళికొడుకు)</option>
+            </select>
+        </div>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print This List</button>
+
+        <div id="common-list" class="checklist-section">
+            <!-- <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p> -->
+            <h2>Common Items for the Ceremony (ఉమ్మడి వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> All items from the&nbsp <a href="general-samagri.html" class="inline-link" target="_blank"> General Puja Samagri list</a></li>
+                <li><input type="checkbox"> Ingredients for Jeelakarra Bellam (జీలకర్ర, బెల్లం)</li>
+                <li><input type="checkbox"> Large quantity of rice & turmeric for Talambralu (తలంబ్రాల బియ్యం)</li>
+                <li><input type="checkbox"> Baskets for Talambralu (తలంబ్రాల గంపలు)</li>
+                <li><input type="checkbox"> A small, flat grindstone (సన్నికల్లు)</li>
+                <li><input type="checkbox"> A new mat for the couple to sit on (కొత్త చాప)</li>
+                <li><input type="checkbox"> Flower garlands for the couple (పూల దండలు)</li>
+            </ul>
+        </div>
+
+        <div id="girl-list" class="checklist-section hidden">
+            <h2>Girl's Side Checklist (పెళ్ళికూతురు వారి జాబితా)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Wedding Sarees for Gauri Puja & Kanyadanam (పెళ్లి చీరలు)</li>
+                <li><input type="checkbox"> Items for Pellikuthuru Cheyadam (నలుగు సామాగ్రి, గాజులు)</li>
+                <li><input type="checkbox"> Idol or image of Goddess Gauri for Gauri Puja</li>
+                <li><input type="checkbox"> Silver plate for Kanyadanam (వెండి పళ్ళెం)</li>
+                <li><input type="checkbox"> Two coconuts for groom's parents (అయ్యవారికి కొబ్బరికాయలు)</li>
+                <li><input type="checkbox"> Groom's attire given by bride's side (పెళ్ళికొడుకు బట్టలు)</li>
+                <li><input type="checkbox"> Gold ring for the groom</li>
+            </ul>
+        </div>
+
+        <div id="boy-list" class="checklist-section hidden">
+            <h2>Boy's Side Checklist (పెళ్ళికొడుకు వారి జాబితా)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Items for Snatakam & Kashi Yatra (Umbrella, book, stick)</li>
+                <li><input type="checkbox"> The Mangalasutram (మంగళసూత్రం) & gold discs (స్థాలీ బిళ్ళలు)</li>
+                <li><input type="checkbox"> The Saree for the Mangalasutra ceremony (మంగళసూత్రం కట్టే చీర)</li>
+                <li><input type="checkbox"> Silver Toe Rings (మెట్టెలు)</li>
+                <li><input type="checkbox"> Groom's main wedding attire</li>
+                <li><input type="checkbox"> Gifts for bride's sisters/cousins (ఆడపడుచు కానుకలు)</li>
+            </ul>
+        </div>
+
+        <a href="life-ceremonies.html" class="back-link">← Back to All Life Ceremonies</a>
+    </div>
+
+    <script>
+        // JavaScript for dropdown and context-aware print
+        const selector = document.getElementById('checklist-selector');
+        const commonList = document.getElementById('common-list');
+        const girlList = document.getElementById('girl-list');
+        const boyList = document.getElementById('boy-list');
+
+        selector.addEventListener('change', function() {
+            // Hide all lists first
+            commonList.classList.add('hidden');
+            girlList.classList.add('hidden');
+            boyList.classList.add('hidden');
+
+            // Show the selected list
+            const selectedValue = selector.value;
+            if (selectedValue === 'common') {
+                commonList.classList.remove('hidden');
+            } else if (selectedValue === 'girl') {
+                girlList.classList.remove('hidden');
+            } else if (selectedValue === 'boy') {
+                boyList.classList.remove('hidden');
+            }
+        });
+
+        function printChecklist() {
+            let visibleListId;
+            if (!commonList.classList.contains('hidden')) {
+                visibleListId = 'common-list';
+            } else if (!girlList.classList.contains('hidden')) {
+                visibleListId = 'girl-list';
+            } else {
+                visibleListId = 'boy-list';
+            }
+            
+            const checklistContent = document.getElementById(visibleListId).innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Wedding Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varalakshmi Vratam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Varalakshmi Vratam
+            <div class="telugu-title">వరలక్ష్మీ వ్రతం</div>
+        </h1>
+        <p class="intro">A checklist for the auspicious puja performed by married women to seek the blessings of Goddess Varalakshmi for the well-being of their families.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
+
+            <h2>For Preparing the Kalasham (కలశం తయారీకి)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> A Silver, Brass, or Copper Pot (వెండి, ఇత్తడి లేదా రాగి చెంబు)</li>
+                <li><input type="checkbox"> A whole Coconut with husk (పీచు ఉన్న కొబ్బరి కాయ)</li>
+                <li><input type="checkbox"> Goddess face for the coconut (అమ్మవారి ముఖం)</li>
+                <li><input type="checkbox"> A new blouse piece to wrap the pot (కొత్త రవికె గుడ్డ)</li>
+                <li><input type="checkbox"> A small new saree for decoration (అమ్మవారికి చీర)</li>
+                <li><input type="checkbox"> Jewelry for decoration (నగలు - గాజులు, హారాలు)</li>
+                <li><input type="checkbox"> A small mirror (అద్దం)</li>
+            </ul>
+
+            <h2>For the Puja Ritual (పూజ కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> A yellow thread for the Thoranam (తోరం కోసం పసుపు దారం)</li>
+                <li><input type="checkbox"> Nine types of flowers (తొమ్మిది రకాల పువ్వులు)</li>
+                <li><input type="checkbox"> A copy of the Varalakshmi Vrata Katha book (వ్రత కథల పుస్తకం)</li>
+                <li><input type="checkbox"> Extra Kumkum for Kumkumarchana (కుంకుమార్చనకు కుంకుమ)</li>
+            </ul>
+
+            <h2>For Naivedyam & Vayanam (నైవేద్యం & వాయనం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Ingredients for Poornam Boorelu (పూర్ణం బూరెలు)</li>
+                <li><input type="checkbox"> Ingredients for Garelu (గారెలు)</li>
+                <li><input type="checkbox"> Ingredients for Chalividi (చలివిడి)</li>
+                <li><input type="checkbox"> Items for `Vayanam` packets for guests:
+                    <ul>
+                        <li><input type="checkbox" style="margin-left: 20px;"> Betel leaves, nuts, fruits</li>
+                        <li><input type="checkbox" style="margin-left: 20px;"> Blouse pieces (రవికె గుడ్డలు)</li>
+                        <li><input type="checkbox" style="margin-left: 20px;"> A small mirror, comb, and bangles</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+        <a href="festivals.html" class="back-link">← Back to All Festivals</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

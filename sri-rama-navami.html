@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Rama Navami Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist li ul { margin-left: 20px; width: 100%; } /* Style for nested lists */
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Sri Rama Navami
+            <div class="telugu-title">శ్రీ రామనవమి</div>
+        </h1>
+        <p class="intro">A checklist for celebrating the birth of Lord Rama, highlighted by its unique and traditional naivedyam offerings.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
+
+            <h2>For the Puja Altar (పూజ పీఠం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Idol or Photo of Sri Rama Pattabhishekam (శ్రీ రాముని పట్టాభిషేకం పటం)</li>
+                <li><input type="checkbox"> A copy of the Ramayana or a story book (రామాయణం పుస్తకం)</li>
+            </ul>
+
+            <h2>Special Naivedyam (విశేష నైవేద్యాలు)</h2>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox"> <strong>Ingredients for Panakam (పానకం)</strong>
+                    <ul>
+                        <li><input type="checkbox"> Jaggery (బెల్లం)</li>
+                        <li><input type="checkbox"> Black Pepper (మిరియాలు)</li>
+                        <li><input type="checkbox"> Cardamom (యాలకులు)</li>
+                        <li><input type="checkbox"> A pinch of Dry Ginger (శొంఠి పొడి)</li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox"> <strong>Ingredients for Vadapappu (వడపప్పు)</strong>
+                    <ul>
+                        <li><input type="checkbox"> Split Moong Dal (పెసర పప్పు)</li>
+                        <li><input type="checkbox"> Salt, finely chopped raw Mango or Coconut</li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox"> <strong>Ingredients for Chalividi (చలివిడి)</strong>
+                    <ul>
+                        <li><input type="checkbox"> Rice Flour (బియ్యం పిండి)</li>
+                        <li><input type="checkbox"> Jaggery (బెల్లం) or Sugar</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Other Offerings (ఇతర నైవేద్యాలు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Bananas and other seasonal fruits</li>
+                <li><input type="checkbox"> A whole Coconut</li>
+            </ul>
+            
+        </div>
+
+        <a href="festivals.html" class="back-link">← Back to All Festivals</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

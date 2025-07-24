@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishekam Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Abhishekam
+            <div class="telugu-title">అభిషేకం</div>
+        </h1>
+        <p class="intro">A general checklist for the sacred bathing ritual of a deity's idol, an act of reverence and service.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+
+            <h2>Pre-Ritual Setup (పూజకు ముందు ఏర్పాటు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Idol (విగ్రహం) of the deity</li>
+                <li><input type="checkbox"> A large tray or basin with a spout (అభిషేక పాత్ర)</li>
+                <li><input type="checkbox"> A Kalasham or pot filled with clean water</li>
+            </ul>
+
+            <h2>The Sacred Liquids (అభిషేక ద్రవ్యాలు)</h2>
+            <p style="text-align:center;">The idol is bathed with each substance, followed by a rinse with pure water (శుద్ధ జలం).</p>
+            <ul class="checklist">
+                <li><input type="checkbox"> Panchamrutam: Milk (పాలు), Curd (పెరుగు), Ghee (నెయ్యి), Honey (తేనె), Sugar (పంచదార)</li>
+                <li><input type="checkbox"> Sugarcane Juice (చెరుకు రసం)</li>
+                <li><input type="checkbox"> Tender Coconut Water (కొబ్బరి నీళ్ళు)</li>
+                <li><input type="checkbox"> Sandalwood Water (గంధోదకం)</li>
+                <li><input type="checkbox"> Turmeric Water (పసుపు నీళ్ళు)</li>
+                <li><input type="checkbox"> Vibhuti Water (విభూతి నీళ్ళు) - for Lord Shiva</li>
+                <li><input type="checkbox"> Assorted Fruit Juices (పండ్ల రసాలు)</li>
+            </ul>
+
+            <h2>Post-Abhishekam: Alankaram (అభిషేకం తరువాత: అలంకారం)</h2>
+            <p style="text-align:center;">After the final rinse, the idol is dressed and prepared for the main puja. For the puja, you will need items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list.</p>
+            <ul class="checklist">
+                <li><input type="checkbox"> A soft, clean cloth to dry the idol</li>
+                <li><input type="checkbox"> New Clothes (నూతన వస్త్రాలు) for the idol</li>
+                <li><input type="checkbox"> Sandalwood Paste (గంధం) and Kumkum (కుంకుమ)</li>
+                <li><input type="checkbox"> Akshatas (అక్షింతలు)</li>
+                <li><input type="checkbox"> A new Sacred Thread (యజ్ఞోపవీతం) for male deities</li>
+                <li><input type="checkbox"> Fresh Flower Garlands (పూల దండలు)</li>
+                <li><input type="checkbox"> Ornaments / Jewelry (ఆభరణాలు)</li>
+            </ul>
+        </div>
+
+        <a href="pujas-vratams.html" class="back-link">← Back to All Specific Pujas</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

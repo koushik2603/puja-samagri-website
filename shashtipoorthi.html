@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashtipoorthi Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Shashtipoorthi
+            <div class="telugu-title">షష్టి పూర్తి</div>
+        </h1>
+        <p class="intro">A grand celebration marking the completion of 60 years of life, renewing vows and praying for health, happiness, and longevity.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
+
+            <h2>For the Setup & Deities (ఏర్పాట్లు & దేవతల కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Multiple Kalashams and coconuts</li>
+                <li><input type="checkbox"> Items for Navagraha Mandalam (colored cloths, grains)</li>
+                <li><input type="checkbox"> Idol or photo of the family deity (కుల దేవత పటం)</li>
+            </ul>
+
+            <h2>For the Homams (హోమాల కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Items for Homam Kundam: Bricks, Sand</li>
+                <li><input type="checkbox"> A large quantity of Ghee (నెయ్యి)</li>
+                <li><input type="checkbox"> Samidhulu (సమిధలు) - firewood sticks</li>
+                <li><input type="checkbox"> Durva grass (గరిక) for Mrityunjaya Homam</li>
+            </ul>
+
+            <h2>For the Couple's Rituals (దంపతుల క్రతువు కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> New attire for the couple (దంపతులకు నూతన వస్త్రాలు)</li>
+                <li><input type="checkbox"> Two fresh flower garlands for exchange (పూల దండలు)</li>
+                <li><input type="checkbox"> A new Mangalasutram (కొత్త మంగళసూత్రం)</li>
+                <li><input type="checkbox"> New Silver Toe Rings (వెండి మెట్టెలు)</li>
+                <li><input type="checkbox"> New Bangles (గాజులు)</li>
+            </ul>
+
+            <h2>For Dana & Guests (దానం & అతిథుల కొరకు)</h2>
+             <ul class="checklist">
+                <li><input type="checkbox"> Clothes for the priests (వస్త్ర దానం)</li>
+                <li><input type="checkbox"> Dakshina (దక్షిణ) - monetary offerings</li>
+                <li><input type="checkbox"> Items for Thamboolam or return gifts for guests</li>
+                <li><input type="checkbox"> A celebratory feast (భోజనం) for family and friends</li>
+            </ul>
+        </div>
+
+        <a href="life-ceremonies.html" class="back-link">← Back to All Life Ceremonies</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

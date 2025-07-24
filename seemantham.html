@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seemantham Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Seemantham
+            <div class="telugu-title">సీమంతం</div>
+        </h1>
+        <p class="intro">A checklist for the traditional ceremony held during pregnancy to bless the mother-to-be and ensure a healthy, happy baby.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
+
+            <h2>For the Puja & Altar (పూజ కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> An idol or photo of your family deity (కుల దేవత పటం)</li>
+                <li><input type="checkbox"> A small bundle of Darbha grass (దర్భలు)</li>
+                <li><input type="checkbox"> Sprouted grains (నవధాన్యాలు) if performing a homam</li>
+            </ul>
+
+            <h2>For the Mother-to-be (గర్భిణీ స్త్రీ కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> A new Saree (కొత్త చీర), traditionally given by her mother</li>
+                <li><input type="checkbox"> A large variety of glass bangles (గాజులు - Glass Bangles)</li>
+                <li><input type="checkbox"> Lac bangles (లక్క గాజులు)</li>
+                <li><input type="checkbox"> Flower garlands (పూల దండలు) and loose flowers for her hair</li>
+                <li><input type="checkbox"> Turmeric paste (`Nalugu`) for applying to her hands and feet</li>
+            </ul>
+
+            <h2>For Rituals & Offerings (క్రతువు & నైవేద్యం కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Ingredients for five types of rice dishes (e.g., Pulihora, Daddojanam, Kobbari Annam)</li>
+                <li><input type="checkbox"> A variety of fruits</li>
+                <li><input type="checkbox"> Sweets and other special dishes</li>
+                <li><input type="checkbox"> Items for `Vayanam` packets for invited women:
+                    <ul>
+                        <li><input type="checkbox" style="margin-left: 20px;"> Betel leaves, nuts, fruit, flowers</li>
+                        <li><input type="checkbox" style="margin-left: 20px;"> Blouse pieces (రవికె గుడ్డలు)</li>
+                        <li><input type="checkbox" style="margin-left: 20px;"> Turmeric and Kumkum packets</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <a href="life-ceremonies.html" class="back-link">← Back to All Life Ceremonies</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

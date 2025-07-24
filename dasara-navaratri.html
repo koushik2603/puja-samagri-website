@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasara Navaratri Checklist | Puja Samagri</title>
+    <style>
+        /* Consistent styling from our other pages */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fff8e1; color: #424242; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #d84315; text-align: center; }
+        .telugu-title { color: #e65100; font-size: 0.7em; }
+        .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
+        .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
+        .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
+        .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
+        .day-list li { display: block; } /* Special style for the day-wise list */
+        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
+        .inline-link:hover { color: #e53935; }
+        .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+        .print-button:hover { background-color: #388e3c; }
+        .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Dasara Navaratri
+            <div class="telugu-title">దసరా నవరాత్రి</div>
+        </h1>
+        <p class="intro">A complete 10-day guide for celebrating the victory of Goddess Durga, from Kalasha Sthapana to Vijayadashami.</p>
+
+        <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
+
+        <div id="checklist-content">
+            <h2>Part 1: First Day Setup (కలశ స్థాపన)</h2>
+            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
+            <ul class="checklist">
+                <li><input type="checkbox"> Idol or Photo of Goddess Durga (దుర్గా దేవి పటం)</li>
+                <li><input type="checkbox"> A Kalasham (కలశం) - silver, copper, or brass</li>
+                <li><input type="checkbox"> A new blouse piece (కొత్త రవికె గుడ్డ) to wrap the Kalasham</li>
+                <li><input type="checkbox"> A whole Coconut (కొబ్బరి కాయ)</li>
+                <li><input type="checkbox"> A tray with soil/sand for Navadhanyam (మట్టి/ఇసుక)</li>
+                <li><input type="checkbox"> Navadhanyam (నవధాన్యాలు) - nine types of grains</li>
+                <li><input type="checkbox"> Bilva leaves (బిల్వ పత్రం) and Red Hibiscus flowers (మందార పువ్వులు)</li>
+            </ul>
+
+            <h2>Part 2: Daily Puja Items (ప్రతిరోజు పూజ కొరకు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Fresh Flowers</li>
+                <li><input type="checkbox"> A larger quantity of Kumkum for Kumkumarchana</li>
+                <li><input type="checkbox"> Incense, Ghee/Oil, and Camphor for daily Aarti</li>
+                <li><input type="checkbox"> Fruits and Betel leaves/nuts for daily offering</li>
+            </ul>
+
+            <h2>Part 3: Day-wise Alankaram & Naivedyam</h2>
+            <ul class="checklist day-list">
+                <li><strong>Day 1: Sri Swarna Kavacha Durga</strong> → Pulihora (పులిహోర)</li>
+                <li><strong>Day 2: Sri Bala Tripura Sundari</strong> → Chakkara Pongali (చక్కర పొంగళి)</li>
+                <li><strong>Day 3: Sri Gayathri Devi</strong> → Ravva Kesari (రవ్వ కేసరి)</li>
+                <li><strong>Day 4: Sri Annapoorna Devi</strong> → Daddojanam (దద్దోజనం)</li>
+                <li><strong>Day 5: Sri Lalitha Tripura Sundari</strong> → Ksheerannam (క్షీరాన్నం)</li>
+                <li><strong>Day 6: Sri Maha Lakshmi Devi</strong> → Poornalu / Boorelu (పూర్ణాలు)</li>
+                <li><strong>Day 7: Sri Saraswati Devi</strong> → Kobbari Annam (కొబ్బరి అన్నం). Place books and instruments at the altar today.</li>
+                <li><strong>Day 8: Sri Durga Devi</strong> → Kadambam Annam (కదంబం అన్నం)</li>
+                <li><strong>Day 9: Sri Mahishasura Mardini</strong> → Pulihora or Payasam</li>
+            </ul>
+
+            <h2>Part 4: 10th Day Vijayadashami Puja (విజయదశమి పూజ)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> A branch of the Shami Tree (శమీ చెట్టు కొమ్మ) for Shami Puja</li>
+                <li><input type="checkbox"> Items for Aayudha Puja (worship of tools, vehicles, etc.)</li>
+                <li><input type="checkbox"> Special sweets to celebrate</li>
+            </ul>
+        </div>
+
+        <a href="festivals.html" class="back-link">← Back to All Festivals</a>
+    </div>
+
+    <script>
+        // JavaScript for our print button
+        function printChecklist() {
+            const checklistContent = document.getElementById('checklist-content').innerHTML;
+            const printWindow = window.open('', '_blank', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print Checklist</title>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(checklistContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

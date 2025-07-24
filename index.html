@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telugu Puja Samagri Checklist (తెలుగు పూజ సామాగ్రి)</title>
+    <style>
+        /* This is our CSS for styling the page */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fff8e1; /* A light cream background */
+            color: #424242; /* Dark grey text */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        h1 {
+            color: #d84315; /* Saffron/Orange color */
+            font-size: 2.5em;
+        }
+        .telugu-title {
+            color: #e65100;
+            font-size: 0.7em;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        
+        /* NEW: Styles for the search box and results */
+        .search-container {
+            margin: 30px auto;
+            max-width: 600px;
+            position: relative;
+        }
+        #search-box {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            border: 2px solid #ffcc80;
+            border-radius: 8px;
+            box-sizing: border-box; /* Important for padding and width */
+        }
+        #search-results {
+            position: absolute;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            z-index: 10;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .result-item {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+        .result-item:hover {
+            background-color: #f5f5f5;
+        }
+        .result-item strong {
+            display: block;
+            font-size: 1.1em;
+            color: #d84315;
+        }
+        .result-item span {
+            font-size: 0.9em;
+            color: #757575;
+        }
+
+        .nav-links {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav-links a {
+            background-color: #ff9800; /* A nice orange */
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #f57c00; /* A darker orange on hover */
+        }
+        footer {
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #757575;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            Puja Samagri Checklists
+            <div class="telugu-title">పూజ సామాగ్రి జాబితా</div>
+        </h1>
+
+        <p>Your simple and complete guide to preparing for sacred pujas and ceremonies, tailored for our Telugu traditions.</p>
+
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="Search for a puja (e.g., Vivaham)...">
+            <div id="search-results"></div>
+        </div>
+
+
+        <nav class="nav-links">
+            <a href="festivals.html">Major Festivals (పండుగలు)</a>
+            <a href="life-ceremonies.html">Life Ceremonies (సంస్కారాలు)</a>
+            <a href="pujas-vratams.html">Specific Pujas (పూజలు & వ్రతాలు)</a>
+            <a href="solemn-rites.html">Solemn Rites (ఇతర క్రతువులు)</a>
+        </nav>
+
+        <footer>
+            <p>A project by us, for us. Built with care in Hyderabad.</p>
+        </footer>
+    </div>
+
+    <script>
+        // This is our website's "database" of pages
+        const pages = [
+            { url: 'general-samagri.html', title: 'General Puja Samagri', description: 'The essential items required for most common Hindu pujas.'},
+            { url: 'vinayaka-chavithi.html', title: 'Vinayaka Chavithi', description: 'The grand celebration for Lord Ganesha, including the 21-leaf Patri puja.'},
+            { url: 'dasara-navaratri.html', title: 'Dasara Navaratri', description: 'A 10-day festival honoring Goddess Durga, with daily alankarams.'},
+            { url: 'varalakshmi-vratam.html', title: 'Varalakshmi Vratam', description: 'An important puja for married women to seek blessings of Goddess Varalakshmi.'},
+            { url: 'sri-rama-navami.html', title: 'Sri Rama Navami', description: 'Celebrating the birth of Lord Rama with Panakam and Vadapappu.'},
+            { url: 'gruhapravesam.html', title: 'Gruhapravesam', description: 'The housewarming ceremony to purify and sanctify a new home.'},
+            { url: 'namakaranam.html', title: 'Namakaranam', description: 'The traditional naming ceremony for a newborn child.'},
+            { url: 'upanayanam.html', title: 'Upanayanam', description: 'The sacred thread ceremony for young boys into student life.'},
+            { url: 'vivaham.html', title: 'Vivaham (Wedding)', description: 'The wedding ceremony, with lists for the bride and groom sides.'},
+            { url: 'vivaham.html', title: 'Pelli (Wedding)', description: 'The wedding ceremony, with lists for the bride and groom sides.'},
+            { url: 'seemantham.html', title: 'Seemantham', description: 'A ceremony performed during pregnancy to bless the mother-to-be.'},
+            { url: 'shashtipoorthi.html', title: 'Shashtipoorthi', description: 'A grand celebration marking the completion of 60 years.'},
+            { url: 'satyanarayana-vratam.html', title: 'Satyanarayana Swamy Vratam', description: 'A popular puja for general well-being and prosperity.'},
+            { url: 'chandi-homam.html', title: 'Chandi Homam', description: 'A powerful fire ritual dedicated to Goddess Chandi.'},
+            { url: 'abhishekam.html', title: 'Abhishekam', description: 'A general checklist for the sacred bathing ritual of a deity.'},
+            { url: 'vahana-puja.html', title: 'Vahana Puja', description: 'A puja performed when purchasing a new vehicle.'},
+            { url: 'aabdeekam.html', title: 'Aabdeekam (Shraddham)', description: 'The annual Shraddha ceremony performed to honour one\'s ancestors.'},
+        ];
+
+        const searchBox = document.getElementById('search-box');
+        const resultsContainer = document.getElementById('search-results');
+
+        searchBox.addEventListener('keyup', function() {
+            const term = this.value.toLowerCase();
+            resultsContainer.innerHTML = '';
+
+            if (term.length < 2) {
+                return; // Don't search for very short terms
+            }
+
+            const filteredPages = pages.filter(page => 
+                page.title.toLowerCase().includes(term) || 
+                page.description.toLowerCase().includes(term)
+            );
+
+            if (filteredPages.length > 0) {
+                filteredPages.forEach(page => {
+                    const resultElement = document.createElement('a');
+                    resultElement.href = page.url;
+                    resultElement.classList.add('result-item');
+                    resultElement.innerHTML = `<strong>${page.title}</strong><span>${page.description}</span>`;
+                    resultsContainer.appendChild(resultElement);
+                });
+            } else {
+                resultsContainer.innerHTML = '<div class="result-item"><span>No results found.</span></div>';
+            }
+        });
+
+        // Optional: Hide results when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!searchBox.contains(event.target)) {
+                resultsContainer.innerHTML = '';
+            }
+        });
+
+    </script>
+
+</body>
+</html>
