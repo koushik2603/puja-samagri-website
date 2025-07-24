@@ -13,10 +13,7 @@
         .intro { font-size: 1.2em; text-align: center; line-height: 1.6; }
         .checklist { list-style-type: none; padding-left: 0; font-size: 1.1em; }
         .checklist li { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; display: flex; align-items: center; }
-        .checklist li ul { margin-left: 20px; width: 100%; } /* Style for nested lists */
         .checklist input[type="checkbox"] { margin-right: 15px; width: 20px; height: 20px; }
-        .inline-link { color: #c62828; font-weight: bold; text-decoration: underline; }
-        .inline-link:hover { color: #e53935; }
         .print-button { display: block; width: 200px; margin: 30px auto; padding: 15px; background-color: #4caf50; color: white; font-size: 1.2em; font-weight: bold; text-align: center; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
         .print-button:hover { background-color: #388e3c; }
         .back-link { display: block; text-align: center; margin-top: 40px; font-weight: bold; color: #d84315; }
@@ -29,48 +26,57 @@
             Sri Satyanarayana Swamy Vratam
             <div class="telugu-title">శ్రీ సత్యనారాయణ స్వామి వ్రతం</div>
         </h1>
-        <p class="intro">A complete checklist for performing the Satyanarayana Vratam, a puja dedicated to Lord Vishnu for truth, prosperity, and the fulfillment of wishes.</p>
+        <p class="intro">A detailed shopping list with quantities for performing the Sri Satyanarayana Swamy Vratam.</p>
 
         <button class="print-button" onclick="printChecklist()">🖨️ Print Checklist</button>
 
         <div id="checklist-content">
             
-            <p style="text-align:center;">First, prepare all items from the <a href="general-samagri.html" class="inline-link" target="_blank">General Puja Samagri</a> list. In addition, the following are required:</p>
-
-            <h2>For the Mandapam & Kalasham (మండపం & కలశం కొరకు)</h2>
+            <h2>Pooja Items & Powders (పూజ సామాగ్రి, చూర్ణాలు)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Image or Idol of Sri Satyanarayana Swamy (స్వామి పటం లేదా విగ్రహం)</li>
-                <li><input type="checkbox"> A new white cloth for the altar (పీఠంపై కొత్త తెల్లటి వస్త్రం)</li>
-                <li><input type="checkbox"> A new blouse piece for the Kalasham (కలశం కోసం కొత్త రవికె గుడ్డ)</li>
-                <li><input type="checkbox"> Wheat grains or Rice for the Navagraha Mandala</li>
-                <li><input type="checkbox"> Navadhanyam (నవధాన్యాలు)</li>
-                <li><input type="checkbox"> Tulasi leaves (తులసి దళాలు) - very important</li>
+                <li><input type="checkbox"> Turmeric (పసుపు): 100 gr</li>
+                <li><input type="checkbox"> Kumkum (కుంకుమ): 100 gr</li>
+                <li><input type="checkbox"> Incense Sticks (అగరుబత్తీలు): 1 packet</li>
+                <li><input type="checkbox"> Camphor (హరతికర్పూరం): 200 gr</li>
+                <li><input type="checkbox"> Sandalwood Box (గంధం): 1 box</li>
+                <li><input type="checkbox"> Whole Turmeric Roots (పసుపుకొమ్ములు): 150 gr</li>
+                <li><input type="checkbox"> Cotton Wicks (వత్తులు): 1 packet</li>
+                <li><input type="checkbox"> Sesame Oil (నువ్వుల నూనె): 1 kg</li>
+                <li><input type="checkbox"> Cotton Thread Roll (దారపుబంతి): 1</li>
             </ul>
 
-            <h2>For the Main Puja & Story (ప్రధాన పూజ & కథ కొరకు)</h2>
+            <h2>Offerings - Flowers, Fruits & Leaves (నైవేద్యం కోసం)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Satyanarayana Vratam Katha book (వ్రత కథల పుస్తకం)</li>
-                <li><input type="checkbox"> Bananas (అరటి పళ్ళు), often in larger quantities</li>
-                <li><input type="checkbox"> Rupee coins (రూపాయి బిళ్ళలు)</li>
-                <li><input type="checkbox"> Dry Dates (ఎండు ఖర్జూరాలు)</li>
-                <li>
-                    <input type="checkbox"> <strong>Panchamrutam (పంచామృతం)</strong>
-                    <ul>
-                        <li><input type="checkbox"> Cow's Milk (ఆవు పాలు)</li>
-                        <li><input type="checkbox"> Curd/Yogurt (పెరుగు)</li>
-                        <li><input type="checkbox"> Ghee (నెయ్యి)</li>
-                        <li><input type="checkbox"> Honey (తేనె)</li>
-                        <li><input type="checkbox"> Sugar (పంచదార)</li>
-                    </ul>
-                </li>
+                <li><input type="checkbox"> Loose Flowers (విడిపూలు): 1 kg</li>
+                <li><input type="checkbox"> Flower Garlands (పూలమూరలు): 20</li>
+                <li><input type="checkbox"> Fruits (పండ్లు): 5 types</li>
+                <li><input type="checkbox"> Betel Leaves (తమలపాకులు): 100</li>
+                <li><input type="checkbox"> Areca Nuts (వక్కలు): 200 gr</li>
+                <li><input type="checkbox"> Dates (ఖర్జూరపండ్లు): 100 gr</li>
+                <li><input type="checkbox"> Coconuts (కొబ్బరికాయలు): 9</li>
             </ul>
 
-            <h2>For the Prasadam (ప్రసాదం కొరకు)</h2>
+            <h2>Groceries & Prasad Items (కిరాణా & ప్రసాదం సామాగ్రి)</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Sooji Rava / Semolina (గోధుమ రవ్వ) for the main prasadam</li>
-                <li><input type="checkbox"> Sugar (పంచదార)</li>
-                <li><input type="checkbox"> Cashews & Raisins (జీడిపప్పు & కిస్మిస్)</li>
-                <li><input type="checkbox"> Cardamom powder (యాలకుల పొడి)</li>
+                <li><input type="checkbox"> Rice (బియ్యము): 3 kg</li>
+                <li><input type="checkbox"> Cow's Milk (ఆవు పాలు): 1/2 lt</li>
+                <li><input type="checkbox"> Cow's Curd (ఆవు పెరుగు): 50 gr</li>
+                <li><input type="checkbox"> Cow's Ghee (ఆవు నెయ్యి): 100 gr</li>
+                <li><input type="checkbox"> Honey (తేనె): 100 gr</li>
+                <li><input type="checkbox"> Sugar (పంచదార): 1 kg</li>
+                <li><input type="checkbox"> Cardamom (యాలకులు): ₹10 worth</li>
+                <li><input type="checkbox"> Cashews (జీడిపప్పు): 100 gr</li>
+                <li><input type="checkbox"> Raisins (కిస్మిస్): 50 gr</li>
+                <li><input type="checkbox"> Semolina / Sooji Rava (గోధుమ రవ్వ): 1 kg</li>
+            </ul>
+
+            <h2>Cloths, Vessels & Miscellaneous (వస్త్రాలు, పాత్రలు & ఇతర వస్తువులు)</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Towels (టవల్స్): 1</li>
+                <li><input type="checkbox"> Blouse Pieces (జాకెట్ ముక్కలు): 2</li>
+                <li><input type="checkbox"> Change/Coins (చిల్లరడబ్బులు): ₹21</li>
+                <li><input type="checkbox"> Lamps (దీపారాధన కుందులు): 1 set</li>
+                <li><input type="checkbox"> Kalasham Pot (కలశం చెంబు): 1</li>
             </ul>
         </div>
 
@@ -83,7 +89,7 @@
             const checklistContent = document.getElementById('checklist-content').innerHTML;
             const printWindow = window.open('', '_blank', 'height=600,width=800');
             printWindow.document.write('<html><head><title>Print Checklist</title>');
-            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;} a{color:#c62828; text-decoration:none; font-weight:bold;}</style>');
+            printWindow.document.write('<style>body{font-family:sans-serif;} h2,h3{color:#d84315;} ul{list-style-type:none; padding-left:0;} li{border-bottom:1px solid #ccc; padding:8px 0;}</style>');
             printWindow.document.write('</head><body>');
             printWindow.document.write(checklistContent);
             printWindow.document.write('</body></html>');
