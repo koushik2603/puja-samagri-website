@@ -31,7 +31,7 @@
             line-height: 1.6;
         }
         
-        /* NEW: Styles for the search box and results */
+        /* Styles for the search box and results */
         .search-container {
             margin: 30px auto;
             max-width: 600px;
@@ -128,12 +128,11 @@
         </nav>
 
         <footer>
-            <p>A tiny project by me, for us. Built with care in Hyderabad.</p>
+            <p>A project by us, for us. Built with care in Hyderabad.</p>
         </footer>
     </div>
 
     <script>
-        // This is our website's "database" of pages
         const pages = [
             { url: 'general-samagri.html', title: 'General Puja Samagri', description: 'The essential items required for most common Hindu pujas.'},
             { url: 'vinayaka-chavithi.html', title: 'Vinayaka Chavithi', description: 'The grand celebration for Lord Ganesha, including the 21-leaf Patri puja.'},
@@ -142,15 +141,21 @@
             { url: 'sri-rama-navami.html', title: 'Sri Rama Navami', description: 'Celebrating the birth of Lord Rama with Panakam and Vadapappu.'},
             { url: 'gruhapravesam.html', title: 'Gruhapravesam', description: 'The housewarming ceremony to purify and sanctify a new home.'},
             { url: 'namakaranam.html', title: 'Namakaranam', description: 'The traditional naming ceremony for a newborn child.'},
+            { url: 'annaprasana.html', title: 'Annaprasana', description: 'The "first rice" ceremony celebrating a baby\'s first intake of solid food.'},
+            { url: 'aksharabhyasam.html', title: 'Aksharabhyasam', description: 'The ceremony to initiate a child into the world of education and letters.'},
             { url: 'upanayanam.html', title: 'Upanayanam', description: 'The sacred thread ceremony for young boys into student life.'},
+            { url: 'nischitartham.html', title: 'Nischitartham (Engagement)', description: 'The formal engagement ceremony where the alliance is fixed.'},
             { url: 'vivaham.html', title: 'Vivaham (Wedding)', description: 'The wedding ceremony, with lists for the bride and groom sides.'},
-            { url: 'vivaham.html', title: 'Pelli (Wedding)', description: 'The wedding ceremony, with lists for the bride and groom sides.'},
+            { url: 'vivaham.html', title: 'Pelli', description: 'The wedding ceremony, with lists for the bride and groom sides.'},
             { url: 'seemantham.html', title: 'Seemantham', description: 'A ceremony performed during pregnancy to bless the mother-to-be.'},
             { url: 'shashtipoorthi.html', title: 'Shashtipoorthi', description: 'A grand celebration marking the completion of 60 years.'},
             { url: 'satyanarayana-vratam.html', title: 'Satyanarayana Swamy Vratam', description: 'A popular puja for general well-being and prosperity.'},
             { url: 'chandi-homam.html', title: 'Chandi Homam', description: 'A powerful fire ritual dedicated to Goddess Chandi.'},
             { url: 'abhishekam.html', title: 'Abhishekam', description: 'A general checklist for the sacred bathing ritual of a deity.'},
             { url: 'vahana-puja.html', title: 'Vahana Puja', description: 'A puja performed when purchasing a new vehicle.'},
+            { url: 'shankusthapana.html', title: 'Shankusthapana (Foundation)', description: 'The foundation stone laying ceremony (Bhoomi Puja).'},
+            { url: 'prarambhotsavam.html', title: 'Prarambhotsavam (Inauguration)', description: 'The inauguration ceremony for a new office, shop, or business.'},
+            { url: 'devata-kalyanam.html', title: 'Devata Kalyanam', description: 'The Celestial Wedding ceremony performed for deities.'},
             { url: 'aabdeekam.html', title: 'Aabdeekam (Shraddham)', description: 'The annual Shraddha ceremony performed to honour one\'s ancestors.'},
         ];
 
@@ -162,7 +167,7 @@
             resultsContainer.innerHTML = '';
 
             if (term.length < 2) {
-                return; // Don't search for very short terms
+                return;
             }
 
             const filteredPages = pages.filter(page => 
@@ -183,13 +188,11 @@
             }
         });
 
-        // Optional: Hide results when clicking outside
         document.addEventListener('click', function(event) {
             if (!searchBox.contains(event.target)) {
                 resultsContainer.innerHTML = '';
             }
         });
-
     </script>
 
 </body>
